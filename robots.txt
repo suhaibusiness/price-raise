@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://suhaibusiness.github.io/price-raise/sitemap.xml

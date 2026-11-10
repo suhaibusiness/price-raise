@@ -1,0 +1,701 @@
+Customer,Email,Phone,Service,Price per visit,Frequency,Customer since,Tags
+Ava Brooks,ava.brooks0@example.com,(555) 0100-1000,Monthly deep clean,235,monthly,12/29/2019,
+Gus Baker,gus.baker1@example.com,(555) 0101-1001,Weekly clean,130,weekly,05/15/2020,
+Harry Green,harry.green2@example.com,(555) 0102-1002,Monthly deep clean,240,monthly,08/06/2022,VIP
+Bea Evans,bea.evans3@example.com,(555) 0103-1003,Fortnightly clean, $ 160 ,Bi-weekly,05/07/2022,
+Jack Adams,jack.adams4@example.com,(555) 0104-1004,Fortnightly clean,$120.00,Every 2 weeks,01/30/2025,
+Una Zhang,una.zhang5@example.com,(555) 0105-1005,Weekly clean,105,weekly,07/14/2024,
+Una Zhang,una.zhang5@example.com,(555) 0105-1005,Weekly clean,105,weekly,07/14/2024,
+Chloe Zhang,chloe.zhang6@example.com,(555) 0106-1006,Monthly deep clean,$230.00,monthly,11/13/2023,Senior discount
+Isla Ellis,isla.ellis7@example.com,(555) 0107-1007,Fortnightly clean,125,Bi-weekly,07/27/2024,Senior discount
+Yusuf Fox,yusuf.fox8@example.com,(555) 0108-1008,Fortnightly clean,$150.00,Bi-weekly,11/07/2017,
+Kofi Irving,kofi.irving9@example.com,(555) 0109-1009,Fortnightly clean,$165.00,Every 2 weeks,2023-06-03,Key holder
+Olive Carter,olive.carter10@example.com,(555) 0110-1010,Fortnightly clean,$130.00,Bi-weekly,02/12/2021,
+Isla Fox,isla.fox11@example.com,(555) 0111-1011,Fortnightly clean,145,Fortnightly,03/23/2023,VIP
+Jack Nash,jack.nash12@example.com,(555) 0112-1012,Window cleaning,$70.00,every 4 weeks,09/03/2026,Senior discount
+Chloe Davies,chloe.davies13@example.com,(555) 0113-1013,Weekly clean,95,weekly,02/06/2020,VIP
+Theo Morgan,theo.morgan14@example.com,(555) 0114-1014,Weekly clean,125,weekly,06/21/2021,Friends & family
+Daniel Ellis,daniel.ellis15@example.com,(555) 0115-1015,Monthly deep clean,$205.00,monthly,06/12/2018,
+Isla Young,isla.young16@example.com,(555) 0116-1016,Window cleaning,$75.00,every 4 weeks,05/19/2020,Commercial
+Olive Brooks,olive.brooks17@example.com,(555) 0117-1017,Monthly deep clean,205,monthly,09/17/2025,
+Kofi James,kofi.james18@example.com,(555) 0118-1018,Fortnightly clean,140,Bi-weekly,02/03/2026,VIP
+Esme Upton,esme.upton19@example.com,(555) 0119-1019,Window cleaning,45,every 4 weeks,02/07/2023,
+Jada Vance,jada.vance20@example.com,(555) 0120-1020,Window cleaning, $ 75 ,every 4 weeks,09/08/2018,Friends & family
+Cal Morgan,cal.morgan21@example.com,(555) 0121-1021,Fortnightly clean,$160.00,Bi-weekly,08/27/2019,
+Noah Davies,noah.davies22@example.com,(555) 0122-1022,Fortnightly clean,150,Fortnightly,01/08/2021,VIP
+Nina Grant,nina.grant23@example.com,(555) 0123-1023,Weekly clean,$100.00,weekly,05/10/2026,Key holder
+Finn Grant,finn.grant24@example.com,(555) 0124-1024,Fortnightly clean,120,Bi-weekly,12/06/2023,
+Harry Reid,harry.reid25@example.com,(555) 0125-1025,Office clean,$320.00,weekly,08/27/2024,Commercial
+Ben James,ben.james26@example.com,(555) 0126-1026,Window cleaning,$45.00,every 4 weeks,03/29/2021,VIP
+Bea Brooks,bea.brooks27@example.com,(555) 0127-1027,Weekly clean,$105.00,weekly,2024-03-08,
+Vic Doyle,vic.doyle28@example.com,(555) 0128-1028,Weekly clean,130,weekly,03/26/2018,VIP
+Mia Walsh,mia.walsh29@example.com,(555) 0129-1029,Window cleaning,$70.00,every 4 weeks,2025-03-06,Commercial
+Noah Foster,noah.foster30@example.com,(555) 0130-1030,Fortnightly clean,150,Bi-weekly,08/03/2024,VIP
+Vic Evans,vic.evans31@example.com,(555) 0131-1031,Monthly deep clean,225,monthly,10/18/2018,VIP
+Bea Clarke,bea.clarke32@example.com,(555) 0132-1032,Fortnightly clean,$130.00,Every 2 weeks,01/12/2026,
+Zoe Lewis,zoe.lewis33@example.com,(555) 0133-1033,Fortnightly clean,$110.00,every other week,02/22/2026,
+Omar Green,omar.green34@example.com,(555) 0134-1034,Weekly clean,120,weekly,2021-11-21,
+Paul Zhang,paul.zhang35@example.com,(555) 0135-1035,Monthly deep clean,$240.00,monthly,08/23/2021,VIP
+Noah Owens,noah.owens36@example.com,(555) 0136-1036,Fortnightly clean,120,Bi-weekly,12/24/2018,
+Noah Ellis,noah.ellis37@example.com,(555) 0137-1037,Office clean,435,weekly,11/20/2019,Commercial
+Cal Upton,cal.upton38@example.com,(555) 0138-1038,Fortnightly clean, $ 130 ,every other week,2020-06-07,Friends & family
+Nina Nash,nina.nash39@example.com,(555) 0139-1039,Monthly deep clean,$185.00,monthly,2019-06-25,Friends & family
+Theo Nash,theo.nash40@example.com,(555) 0140-1040,Monthly deep clean,,monthly,08/28/2021,
+Lena Baker,lena.baker41@example.com,(555) 0141-1041,Window cleaning,TBC,every 4 weeks,01/31/2019,VIP
+Daniel Carter,daniel.carter42@example.com,(555) 0142-1042,Office clean,"1,250.00",weekly,2020-09-15,Commercial
+Leo Quinn,daniel.james43@example.com,(555) 0143-1043,Window cleaning,$280.00,weekly,04/11/2024,Commercial
+Leo Quinn,leo.quinn44@example.com,(555) 0144-1044,Weekly clean,$110.00,weekly,12/16/2017,
+Wes Zhang,wes.zhang45@example.com,(555) 0145-1045,Weekly clean,135,weekly,09/26/2024,Senior discount
+Isla Turner,isla.turner46@example.com,(555) 0146-1046,Window cleaning,$55.00,every 4 weeks,12/25/2018,Key holder
+Noah Baker,noah.baker47@example.com,(555) 0147-1047,Monthly deep clean, $ 180 ,monthly,11/23/2022,Senior discount
+Jack Owens,jack.owens48@example.com,(555) 0148-1048,Window cleaning, $ 45 ,every 4 weeks,10/28/2018,Commercial
+Amir Clarke,amir.clarke49@example.com,(555) 0149-1049,Window cleaning,$75.00,every 4 weeks,10/06/2019,
+Ben Grant,ben.grant50@example.com,(555) 0150-1050,Weekly clean,$135.00,weekly,10/23/2020,
+Finn Quinn,finn.quinn51@example.com,(555) 0151-1051,Window cleaning,$75.00,every 4 weeks,2018-08-23,
+Jada Hale,jada.hale52@example.com,(555) 0152-1052,Window cleaning, $ 75 ,every 4 weeks,2018-07-30,
+Esme Clarke,esme.clarke53@example.com,(555) 0153-1053,Weekly clean,$100.00,weekly,11/22/2018,
+Sara Vance,sara.vance54@example.com,(555) 0154-1054,Fortnightly clean,$150.00,Bi-weekly,10/27/2021,Commercial
+Noah Hale,noah.hale55@example.com,(555) 0155-1055,Monthly deep clean, $ 180 ,monthly,04/05/2018,
+Noah James,noah.james56@example.com,(555) 0156-1056,Office clean,$380.00,weekly,2020-02-26,Commercial
+Dev Vance,dev.vance57@example.com,(555) 0157-1057,Weekly clean,$140.00,weekly,04/29/2026,Key holder
+Zoe Quinn,zoe.quinn58@example.com,(555) 0158-1058,Fortnightly clean,130,Bi-weekly,2026-03-09,Senior discount
+Mia Morgan,mia.morgan59@example.com,(555) 0159-1059,Weekly clean,115,weekly,09/11/2026,VIP
+Vic Foster,vic.foster60@example.com,(555) 0160-1060,Window cleaning,$75.00,every 4 weeks,2026-02-07,Senior discount
+Sara Adams,sara.adams61@example.com,(555) 0161-1061,Weekly clean,$105.00,weekly,02/21/2023,
+Olive Adams,olive.adams62@example.com,(555) 0162-1062,Fortnightly clean,$155.00,Every 2 weeks,2021-09-21,Senior discount
+Gus Doyle,gus.doyle63@example.com,(555) 0163-1063,Weekly clean,$110.00,weekly,10/24/2018,
+Chloe Upton,chloe.upton64@example.com,(555) 0164-1064,Fortnightly clean,$135.00,every other week,07/29/2021,
+Quinn Doyle,quinn.doyle65@example.com,(555) 0165-1065,Fortnightly clean,145,every other week,11/15/2019,Friends & family
+Vic Quinn,vic.quinn66@example.com,(555) 0166-1066,Weekly clean,110,weekly,07/22/2026,VIP
+Sam Zhang,sam.zhang67@example.com,(555) 0167-1067,Fortnightly clean,$160.00,Every 2 weeks,02/26/2023,Commercial
+Vic Morgan,vic.morgan68@example.com,(555) 0168-1068,Fortnightly clean, $ 160 ,Bi-weekly,2019-09-20,
+Max Turner,max.turner69@example.com,(555) 0169-1069,Weekly clean, $ 110 ,weekly,06/24/2026,Commercial
+Bea Lewis,bea.lewis70@example.com,(555) 0170-1070,Window cleaning,$45.00,every 4 weeks,2024-02-16,
+Gus Carter,gus.carter71@example.com,(555) 0171-1071,Fortnightly clean,$160.00,every other week,06/14/2026,
+Sara Morgan,sara.morgan72@example.com,(555) 0172-1072,Fortnightly clean,160,Every 2 weeks,01/01/2025,
+Sara Upton,sara.upton73@example.com,(555) 0173-1073,Fortnightly clean, $ 140 ,Bi-weekly,12/19/2021,Senior discount
+Uma Hughes,uma.hughes74@example.com,(555) 0174-1074,Monthly deep clean,$260.00,monthly,03/31/2020,Senior discount
+Noah Upton,noah.upton75@example.com,(555) 0175-1075,Office clean,$225.00,weekly,01/25/2020,Commercial
+Grace Davies,grace.davies76@example.com,(555) 0176-1076,Fortnightly clean,$120.00,Bi-weekly,12/20/2018,Friends & family
+Grace Davies,grace.davies76@example.com,(555) 0176-1076,Fortnightly clean,$120.00,Bi-weekly,12/20/2018,Friends & family
+Tara Turner,tara.turner77@example.com,(555) 0177-1077,Monthly deep clean,210,monthly,05/28/2022,VIP
+Leo James,leo.james78@example.com,(555) 0178-1078,Fortnightly clean,$135.00,every other week,01/26/2026,Key holder
+Lena Carter,lena.carter79@example.com,(555) 0179-1079,Window cleaning,$50.00,every 4 weeks,07/17/2021,
+Pia Fox,pia.fox80@example.com,(555) 0180-1080,Fortnightly clean,120,Bi-weekly,12/06/2024,Senior discount
+Kofi Fox,kofi.fox81@example.com,(555) 0181-1081,Fortnightly clean,$135.00,Bi-weekly,2023-05-21,
+Sam Ellis,sam.ellis82@example.com,(555) 0182-1082,Fortnightly clean,$150.00,Bi-weekly,11/12/2018,
+Finn Hale,finn.hale83@example.com,(555) 0183-1083,Weekly clean,$95.00,weekly,2018-11-26,
+Leo Davies,leo.davies84@example.com,(555) 0184-1084,Fortnightly clean,$120.00,Every 2 weeks,12/12/2021,
+Mia Khan,mia.khan85@example.com,(555) 0185-1085,Fortnightly clean,115,every other week,01/31/2018,
+Ben Carter,ben.carter86@example.com,(555) 0186-1086,Weekly clean,130,weekly,08/18/2022,
+Omar Patel,omar.patel87@example.com,(555) 0187-1087,Window cleaning, $ 65 ,every 4 weeks,08/05/2019,
+Zoe Hale,zoe.hale88@example.com,(555) 0188-1088,Fortnightly clean,130,Every 2 weeks,11/15/2021,
+Theo Turner,theo.turner89@example.com,(555) 0189-1089,Weekly clean,$135.00,weekly,01/04/2022,Key holder
+Bea Reid,bea.reid90@example.com,(555) 0190-1090,Fortnightly clean,$140.00,Fortnightly,02/12/2023,Commercial
+Sam Hughes,sam.hughes91@example.com,(555) 0191-1091,Weekly clean,$130.00,weekly,11/30/2018,Key holder
+Tara Reid,tara.reid92@example.com,(555) 0192-1092,Weekly clean,$105.00,weekly,09/17/2022,
+Sara Reid,sara.reid93@example.com,(555) 0193-1093,Window cleaning,65,every 4 weeks,2025-11-06,
+Mia Turner,mia.turner94@example.com,(555) 0194-1094,Office clean,405,weekly,06/19/2025,Commercial
+Harry James,harry.james95@example.com,(555) 0195-1095,Monthly deep clean,$255.00,monthly,12/02/2023,Senior discount
+Fred Davies,fred.davies96@example.com,(555) 0196-1096,Monthly deep clean,240,monthly,06/08/2023,
+Mia Grant,mia.grant97@example.com,(555) 0197-1097,Weekly clean, $ 135 ,weekly,08/27/2022,
+,,,,,,,
+Vic Lewis,vic.lewis98@example.com,(555) 0198-1098,Fortnightly clean,$120.00,Bi-weekly,02/12/2025,Senior discount
+Esme Owens,esme.owens99@example.com,(555) 0199-1099,Window cleaning,80,every 4 weeks,09/03/2026,
+Yusuf Evans,yusuf.evans100@example.com,(555) 0100-1100,Office clean,$445.00,weekly,04/03/2019,Commercial
+Daniel Davies,daniel.davies101@example.com,(555) 0101-1101,Fortnightly clean,$155.00,Every 2 weeks,01/01/2026,Key holder
+Lena Grant,lena.grant102@example.com,(555) 0102-1102,Fortnightly clean, $ 125 ,Every 2 weeks,01/09/2023,
+Yusuf Green,yusuf.green103@example.com,(555) 0103-1103,Monthly deep clean,$205.00,monthly,07/02/2026,
+Ruby Evans,ruby.evans104@example.com,(555) 0104-1104,Window cleaning,$70.00,every 4 weeks,08/23/2021,
+Grace Khan,grace.khan105@example.com,(555) 0105-1105,Fortnightly clean,$155.00,Every 2 weeks,09/08/2023,
+Raj Zhang,raj.zhang106@example.com,(555) 0106-1106,Fortnightly clean,$115.00,every other week,2018-09-02,
+Harry Upton,harry.upton107@example.com,(555) 0107-1107,Weekly clean, $ 100 ,weekly,2019-07-07,Senior discount
+Mia Nash,mia.nash108@example.com,(555) 0108-1108,Weekly clean,$110.00,weekly,09/28/2026,Key holder
+Mia Doyle,mia.doyle109@example.com,(555) 0109-1109,Weekly clean,105,weekly,06/21/2019,
+Vic Owens,vic.owens110@example.com,(555) 0110-1110,Fortnightly clean,$135.00,Every 2 weeks,2017-12-01,Senior discount
+Kate Morgan,kate.morgan111@example.com,(555) 0111-1111,Weekly clean,$115.00,weekly,11/25/2022,Key holder
+Jack Young,jack.young112@example.com,(555) 0112-1112,Window cleaning,$65.00,every 4 weeks,11/04/2021,
+Gus Owens,gus.owens113@example.com,(555) 0113-1113,Weekly clean,$125.00,weekly,02/18/2022,Commercial
+Daniel Walsh,daniel.walsh114@example.com,(555) 0114-1114,Fortnightly clean,120,every other week,10/31/2022,
+Hana Ellis,hana.ellis115@example.com,(555) 0115-1115,Fortnightly clean,$155.00,Every 2 weeks,06/11/2021,VIP
+Pia Evans,pia.evans116@example.com,(555) 0116-1116,Weekly clean,$135.00,weekly,07/12/2019,VIP
+Ian Zhang,ian.zhang117@example.com,(555) 0117-1117,Fortnightly clean,$120.00,every other week,12/24/2022,VIP
+Ruby Brooks,ruby.brooks118@example.com,(555) 0118-1118,Office clean,340,weekly,06/22/2025,Commercial
+Zoe Carter,zoe.carter119@example.com,(555) 0119-1119,Fortnightly clean,$165.00,Fortnightly,02/13/2018,Commercial
+Pia Green,pia.green120@example.com,(555) 0120-1120,Fortnightly clean,$135.00,Bi-weekly,01/16/2023,Senior discount
+Hana Morgan,hana.morgan121@example.com,(555) 0121-1121,Monthly deep clean, $ 250 ,monthly,02/23/2021,
+Raj Walsh,raj.walsh122@example.com,(555) 0122-1122,Monthly deep clean,225,monthly,08/04/2021,Senior discount
+Nina Brooks,nina.brooks123@example.com,(555) 0123-1123,Weekly clean,$115.00,weekly,04/03/2026,Commercial
+Chloe Nash,chloe.nash124@example.com,(555) 0124-1124,Fortnightly clean,165,Bi-weekly,06/21/2020,
+Harry Foster,harry.foster125@example.com,(555) 0125-1125,Weekly clean,135,weekly,04/05/2024,
+Hana Clarke,hana.clarke126@example.com,(555) 0126-1126,Monthly deep clean,$185.00,monthly,01/05/2024,
+Isla Carter,isla.carter127@example.com,(555) 0127-1127,Window cleaning,60,every 4 weeks,2023-08-06,
+Omar Brooks,omar.brooks128@example.com,(555) 0128-1128,Window cleaning,$60.00,every 4 weeks,2020-03-17,Friends & family
+Hana Doyle,hana.doyle129@example.com,(555) 0129-1129,Office clean,$325.00,weekly,07/29/2021,Commercial
+Ben Shaw,ben.shaw130@example.com,(555) 0130-1130,Fortnightly clean,$165.00,Bi-weekly,02/05/2023,Commercial
+Quinn James,quinn.james131@example.com,(555) 0131-1131,Weekly clean,$115.00,weekly,08/01/2021,Key holder
+Hana Lewis,hana.lewis132@example.com,(555) 0132-1132,Window cleaning, $ 65 ,every 4 weeks,2023-07-02,
+Gus Clarke,gus.clarke133@example.com,(555) 0133-1133,Window cleaning, $ 80 ,every 4 weeks,01/27/2024,Key holder
+Wes Khan,wes.khan134@example.com,(555) 0134-1134,Fortnightly clean,150,Every 2 weeks,10/05/2023,
+Paul Green,paul.green135@example.com,(555) 0135-1135,Weekly clean,130,weekly,04/22/2021,
+Ava Walsh,ava.walsh136@example.com,(555) 0136-1136,Fortnightly clean,$120.00,Bi-weekly,10/01/2020,Senior discount
+Grace Green,grace.green137@example.com,(555) 0137-1137,Weekly clean,135,weekly,01/15/2025,Senior discount
+Amir Adams,amir.adams138@example.com,(555) 0138-1138,Window cleaning, $ 65 ,every 4 weeks,05/05/2018,VIP
+Nina James,nina.james139@example.com,(555) 0139-1139,Office clean,230,weekly,04/15/2025,Commercial
+Sam Clarke,sam.clarke140@example.com,(555) 0140-1140,Monthly deep clean,190,monthly,07/15/2021,Senior discount
+Esme Reid,esme.reid141@example.com,(555) 0141-1141,Window cleaning,$75.00,every 4 weeks,04/05/2021,
+Leo Irving,leo.irving142@example.com,(555) 0142-1142,Fortnightly clean,135,Fortnightly,12/24/2023,Friends & family
+Chloe Ellis,chloe.ellis143@example.com,(555) 0143-1143,Fortnightly clean,140,Fortnightly,05/17/2018,
+Isla Owens,isla.owens144@example.com,(555) 0144-1144,Fortnightly clean,110,Every 2 weeks,04/02/2023,Key holder
+Harry Hale,harry.hale145@example.com,(555) 0145-1145,Window cleaning,$55.00,every 4 weeks,04/03/2024,Commercial
+Max James,max.james146@example.com,(555) 0146-1146,Fortnightly clean,145,every other week,02/26/2018,Friends & family
+Pia James,pia.james147@example.com,(555) 0147-1147,Office clean,285,weekly,2021-01-29,Commercial
+Daniel Green,daniel.green148@example.com,(555) 0148-1148,Fortnightly clean,$115.00,Bi-weekly,2025-10-21,
+Daniel Green,daniel.green148@example.com,(555) 0148-1148,Fortnightly clean,$115.00,Bi-weekly,2025-10-21,
+Raj Morgan,raj.morgan149@example.com,(555) 0149-1149,Monthly deep clean,205,monthly,08/19/2018,Key holder
+Noah Green,noah.green150@example.com,(555) 0150-1150,Office clean,$425.00,weekly,2021-10-11,Commercial
+Mia Lewis,mia.lewis151@example.com,(555) 0151-1151,Fortnightly clean,$120.00,Every 2 weeks,2023-09-25,
+Tara Davies,tara.davies152@example.com,(555) 0152-1152,Weekly clean,$130.00,weekly,12/09/2018,
+Leo Zhang,leo.zhang153@example.com,(555) 0153-1153,Weekly clean,$120.00,weekly,2020-08-04,Friends & family
+Lena Patel,lena.patel154@example.com,(555) 0154-1154,Office clean, $ 220 ,weekly,08/31/2018,Commercial
+Sara Hale,sara.hale155@example.com,(555) 0155-1155,Fortnightly clean,$165.00,every other week,2026-06-20,
+Lena Young,lena.young156@example.com,(555) 0156-1156,Weekly clean,115,weekly,03/21/2021,Commercial
+Ian Doyle,ian.doyle157@example.com,(555) 0157-1157,Fortnightly clean,130,Every 2 weeks,05/06/2018,Friends & family
+Jada Reid,jada.reid158@example.com,(555) 0158-1158,Fortnightly clean, $ 135 ,Every 2 weeks,2021-01-22,Senior discount
+Ian Hughes,ian.hughes159@example.com,(555) 0159-1159,Fortnightly clean,$115.00,every other week,08/03/2018,
+Bea Walsh,bea.walsh160@example.com,(555) 0160-1160,Fortnightly clean,115,Every 2 weeks,04/09/2024,
+Olive Quinn,olive.quinn161@example.com,(555) 0161-1161,Window cleaning, $ 60 ,every 4 weeks,2023-09-30,Senior discount
+Raj Baker,raj.baker162@example.com,(555) 0162-1162,Fortnightly clean,125,Every 2 weeks,04/16/2025,
+Mia Owens,mia.owens163@example.com,(555) 0163-1163,Office clean,$450.00,weekly,2025-02-03,Commercial
+Pia Khan,pia.khan164@example.com,(555) 0164-1164,Office clean,$425.00,weekly,02/22/2020,Commercial
+Fred Reid,fred.reid165@example.com,(555) 0165-1165,Fortnightly clean,$130.00,Bi-weekly,2025-03-13,
+Tara Young,tara.young166@example.com,(555) 0166-1166,Office clean,410,weekly,06/11/2019,Commercial
+Fred Ellis,fred.ellis167@example.com,(555) 0167-1167,Fortnightly clean, $ 110 ,Fortnightly,11/09/2022,Senior discount
+Uma Doyle,uma.doyle168@example.com,(555) 0168-1168,Monthly deep clean,235,monthly,03/24/2021,
+Isla Reid,isla.reid169@example.com,(555) 0169-1169,Monthly deep clean,$230.00,monthly,12/24/2022,Key holder
+Zoe Zhang,zoe.zhang170@example.com,(555) 0170-1170,Fortnightly clean,$135.00,Every 2 weeks,11/25/2025,Friends & family
+Harry Ellis,harry.ellis171@example.com,(555) 0171-1171,Fortnightly clean,$140.00,Fortnightly,12/06/2020,
+Jada Owens,jada.owens172@example.com,(555) 0172-1172,Fortnightly clean,$115.00,Every 2 weeks,07/11/2019,Key holder
+Wes Green,wes.green173@example.com,(555) 0173-1173,Fortnightly clean,155,every other week,10/02/2025,
+Mia Irving,mia.irving174@example.com,(555) 0174-1174,Office clean,$260.00,weekly,09/05/2025,Commercial
+Sam Young,sam.young175@example.com,(555) 0175-1175,Weekly clean,$130.00,weekly,02/08/2018,VIP
+Amir Irving,amir.irving176@example.com,(555) 0176-1176,Weekly clean,$120.00,weekly,05/10/2020,VIP
+Nina Davies,nina.davies177@example.com,(555) 0177-1177,Fortnightly clean,120,every other week,05/07/2021,Senior discount
+Kate Upton,kate.upton178@example.com,(555) 0178-1178,Office clean,$450.00,weekly,07/05/2020,Commercial
+Chloe Walsh,chloe.walsh179@example.com,(555) 0179-1179,Fortnightly clean,150,Every 2 weeks,2023-09-24,VIP
+Harry Turner,harry.turner180@example.com,(555) 0180-1180,Fortnightly clean,140,Every 2 weeks,02/15/2019,Key holder
+Dev Green,dev.green181@example.com,(555) 0181-1181,Weekly clean, $ 105 ,weekly,2022-10-01,
+Una Hughes,una.hughes182@example.com,(555) 0182-1182,Fortnightly clean,110,Bi-weekly,05/31/2019,Friends & family
+Yusuf Doyle,yusuf.doyle183@example.com,(555) 0183-1183,Fortnightly clean,$135.00,every other week,2024-02-14,Senior discount
+Paul Walsh,paul.walsh184@example.com,(555) 0184-1184,Office clean,315,weekly,2020-08-24,Commercial
+Amir Lewis,amir.lewis185@example.com,(555) 0185-1185,Weekly clean, $ 120 ,weekly,08/03/2021,
+Tara Vance,tara.vance186@example.com,(555) 0186-1186,Weekly clean,130,weekly,07/09/2020,Commercial
+Yusuf James,yusuf.james187@example.com,(555) 0187-1187,Weekly clean,$105.00,weekly,09/26/2025,
+Dev Hughes,dev.hughes188@example.com,(555) 0188-1188,Fortnightly clean,$165.00,Bi-weekly,07/17/2023,Friends & family
+Tara Upton,tara.upton189@example.com,(555) 0189-1189,Office clean,220,weekly,09/22/2018,Commercial
+Kofi Vance,kofi.vance190@example.com,(555) 0190-1190,Fortnightly clean,120,Every 2 weeks,10/27/2025,Friends & family
+Nina Shaw,nina.shaw191@example.com,(555) 0191-1191,Weekly clean,125,weekly,2019-09-02,
+Paul Reid,paul.reid192@example.com,(555) 0192-1192,Window cleaning,$75.00,every 4 weeks,01/28/2021,Friends & family
+Ruby Hughes,ruby.hughes193@example.com,(555) 0193-1193,Fortnightly clean, $ 115 ,Fortnightly,2021-02-21,Friends & family
+Sara Davies,sara.davies194@example.com,(555) 0194-1194,Window cleaning,55,every 4 weeks,07/15/2020,
+Yusuf Shaw,yusuf.shaw195@example.com,(555) 0195-1195,Weekly clean,$105.00,weekly,04/03/2023,
+Gus Hughes,gus.hughes196@example.com,(555) 0196-1196,Weekly clean,$120.00,weekly,2024-12-14,Friends & family
+Ruby Reid,ruby.reid197@example.com,(555) 0197-1197,Fortnightly clean,$140.00,Bi-weekly,10/09/2020,Friends & family
+Quinn Shaw,quinn.shaw198@example.com,(555) 0198-1198,Monthly deep clean, $ 250 ,monthly,01/16/2023,Friends & family
+Kofi Khan,kofi.khan199@example.com,(555) 0199-1199,Monthly deep clean,260,monthly,01/27/2021,VIP
+Sara Grant,sara.grant200@example.com,(555) 0100-1200,Monthly deep clean,$180.00,monthly,2025-01-29,
+Dev Carter,dev.carter201@example.com,(555) 0101-1201,Monthly deep clean,190,monthly,07/17/2020,Key holder
+Zoe James,zoe.james202@example.com,(555) 0102-1202,Window cleaning,55,every 4 weeks,12/25/2017,
+Noah Patel,noah.patel203@example.com,(555) 0103-1203,Fortnightly clean,145,Bi-weekly,04/26/2024,
+Bea Vance,bea.vance204@example.com,(555) 0104-1204,Window cleaning,70,every 4 weeks,12/05/2023,VIP
+Chloe Evans,chloe.evans205@example.com,(555) 0105-1205,Monthly deep clean,250,monthly,10/27/2024,Senior discount
+Esme Morgan,esme.morgan206@example.com,(555) 0106-1206,Fortnightly clean,145,Fortnightly,02/19/2022,
+Amir Shaw,amir.shaw207@example.com,(555) 0107-1207,Monthly deep clean,$230.00,monthly,11/15/2024,
+Yusuf Clarke,yusuf.clarke208@example.com,(555) 0108-1208,Monthly deep clean,245,monthly,11/14/2025,Commercial
+Paul Lewis,paul.lewis209@example.com,(555) 0109-1209,Monthly deep clean,$180.00,monthly,04/19/2021,VIP
+Noah Young,noah.young210@example.com,(555) 0110-1210,Monthly deep clean, $ 195 ,monthly,06/14/2022,Key holder
+Uma Turner,uma.turner211@example.com,(555) 0111-1211,Fortnightly clean,135,Bi-weekly,12/22/2020,Friends & family
+Wes Davies,wes.davies212@example.com,(555) 0112-1212,Weekly clean,$105.00,weekly,11/12/2021,
+Tara Adams,tara.adams213@example.com,(555) 0113-1213,Fortnightly clean,$120.00,Bi-weekly,02/07/2020,
+Zoe Shaw,zoe.shaw214@example.com,(555) 0114-1214,Monthly deep clean,$230.00,monthly,08/26/2020,
+Yusuf Young,yusuf.young215@example.com,(555) 0115-1215,Fortnightly clean,$165.00,every other week,11/09/2019,
+Noah Carter,noah.carter216@example.com,(555) 0116-1216,Fortnightly clean,$155.00,Fortnightly,06/12/2020,Commercial
+Ella Hughes,ella.hughes217@example.com,(555) 0117-1217,Weekly clean,$120.00,weekly,08/15/2021,
+Paul Grant,paul.grant218@example.com,(555) 0118-1218,Fortnightly clean, $ 160 ,Bi-weekly,09/16/2018,
+Gus Walsh,gus.walsh219@example.com,(555) 0119-1219,Fortnightly clean,130,every other week,06/18/2024,VIP
+Gus Walsh,gus.walsh219@example.com,(555) 0119-1219,Fortnightly clean,130,every other week,06/18/2024,VIP
+Hana Hale,hana.hale220@example.com,(555) 0120-1220,Fortnightly clean, $ 110 ,Every 2 weeks,2019-04-19,Senior discount
+Esme Fox,esme.fox221@example.com,(555) 0121-1221,Weekly clean,$135.00,weekly,2023-03-08,VIP
+Ruby Zhang,ruby.zhang222@example.com,(555) 0122-1222,Weekly clean,$130.00,weekly,2019-10-08,
+Leo Turner,leo.turner223@example.com,(555) 0123-1223,Fortnightly clean, $ 125 ,every other week,06/29/2025,
+Cal Young,cal.young224@example.com,(555) 0124-1224,Weekly clean,$105.00,weekly,09/27/2022,
+Chloe Foster,chloe.foster225@example.com,(555) 0125-1225,Window cleaning,65,every 4 weeks,06/29/2026,VIP
+Ella Lewis,ella.lewis226@example.com,(555) 0126-1226,Weekly clean,140,weekly,12/15/2022,Commercial
+Gus Ellis,gus.ellis227@example.com,(555) 0127-1227,Weekly clean,100,weekly,07/30/2020,Key holder
+Jack Doyle,jack.doyle228@example.com,(555) 0128-1228,Fortnightly clean,160,Fortnightly,02/09/2020,Key holder
+Omar Khan,omar.khan229@example.com,(555) 0129-1229,Monthly deep clean, $ 245 ,monthly,01/10/2020,
+Gus Khan,gus.khan230@example.com,(555) 0130-1230,Weekly clean,$115.00,weekly,06/18/2025,Commercial
+Ava Lewis,ava.lewis231@example.com,(555) 0131-1231,Monthly deep clean,$215.00,monthly,11/14/2024,
+Ava Adams,ava.adams232@example.com,(555) 0132-1232,Weekly clean,$135.00,weekly,01/24/2020,
+Ruby Young,ruby.young233@example.com,(555) 0133-1233,Fortnightly clean,$130.00,every other week,09/18/2018,
+Amir James,amir.james234@example.com,(555) 0134-1234,Monthly deep clean, $ 215 ,monthly,06/22/2024,Friends & family
+Ruby Owens,ruby.owens235@example.com,(555) 0135-1235,Fortnightly clean,$135.00,every other week,10/31/2021,Friends & family
+Sam Green,sam.green236@example.com,(555) 0136-1236,Weekly clean, $ 115 ,weekly,03/15/2025,
+Tara Hughes,tara.hughes237@example.com,(555) 0137-1237,Fortnightly clean,$115.00,Fortnightly,07/02/2025,
+Paul Young,paul.young238@example.com,(555) 0138-1238,Fortnightly clean,$120.00,Fortnightly,07/29/2023,Key holder
+Nina Clarke,nina.clarke239@example.com,(555) 0139-1239,Window cleaning,$80.00,every 4 weeks,08/01/2019,VIP
+Pia Foster,pia.foster240@example.com,(555) 0140-1240,Fortnightly clean,115,every other week,2025-08-06,Commercial
+Bea Carter,bea.carter241@example.com,(555) 0141-1241,Weekly clean, $ 110 ,weekly,01/23/2018,Key holder
+Olive Fox,olive.fox242@example.com,(555) 0142-1242,Fortnightly clean,$130.00,Every 2 weeks,04/04/2022,Friends & family
+Paul James,paul.james243@example.com,(555) 0143-1243,Monthly deep clean,$250.00,monthly,03/10/2023,Friends & family
+Jack Davies,jack.davies244@example.com,(555) 0144-1244,Monthly deep clean,215,monthly,03/23/2025,
+Kofi Turner,kofi.turner245@example.com,(555) 0145-1245,Weekly clean,$125.00,weekly,01/28/2020,
+Uma Owens,uma.owens246@example.com,(555) 0146-1246,Fortnightly clean,$150.00,every other week,05/13/2022,VIP
+Grace Evans,grace.evans247@example.com,(555) 0147-1247,Fortnightly clean,130,Fortnightly,09/07/2023,
+Max Young,max.young248@example.com,(555) 0148-1248,Fortnightly clean,155,Fortnightly,2025-11-21,
+Mia Adams,mia.adams249@example.com,(555) 0149-1249,Fortnightly clean,$130.00,Bi-weekly,2026-03-14,Commercial
+Ben Khan,ben.khan250@example.com,(555) 0150-1250,Fortnightly clean, $ 130 ,Bi-weekly,12/06/2017,
+Zoe Ellis,zoe.ellis251@example.com,(555) 0151-1251,Window cleaning,$60.00,every 4 weeks,2024-11-01,
+Kofi Walsh,kofi.walsh252@example.com,(555) 0152-1252,Fortnightly clean,$140.00,Fortnightly,07/16/2021,Friends & family
+Hana Quinn,hana.quinn253@example.com,(555) 0153-1253,Weekly clean,120,weekly,11/18/2023,
+Tara Shaw,tara.shaw254@example.com,(555) 0154-1254,Window cleaning,$70.00,every 4 weeks,05/21/2020,Commercial
+,,,,,,,
+Gus Adams,gus.adams255@example.com,(555) 0155-1255,Weekly clean,$135.00,weekly,12/18/2019,Key holder
+Jada Hughes,jada.hughes256@example.com,(555) 0156-1256,Fortnightly clean,150,Every 2 weeks,12/03/2020,
+Quinn Turner,quinn.turner257@example.com,(555) 0157-1257,Office clean,$225.00,weekly,05/05/2021,Commercial
+Tara Zhang,tara.zhang258@example.com,(555) 0158-1258,Fortnightly clean,$160.00,Bi-weekly,01/16/2026,VIP
+Amir Brooks,amir.brooks259@example.com,(555) 0159-1259,Weekly clean,$115.00,weekly,2020-06-25,Key holder
+Bea Patel,bea.patel260@example.com,(555) 0160-1260,Fortnightly clean,110,Bi-weekly,01/06/2022,VIP
+Noah Vance,noah.vance261@example.com,(555) 0161-1261,Window cleaning,$50.00,every 4 weeks,10/02/2025,
+Raj Foster,raj.foster262@example.com,(555) 0162-1262,Fortnightly clean,$145.00,every other week,06/16/2020,Commercial
+Olive Foster,olive.foster263@example.com,(555) 0163-1263,Office clean,310,weekly,05/26/2026,Commercial
+Cal James,cal.james264@example.com,(555) 0164-1264,Office clean, $ 295 ,weekly,03/21/2020,Commercial
+Daniel Clarke,daniel.clarke265@example.com,(555) 0165-1265,Window cleaning,$75.00,every 4 weeks,12/18/2025,
+Max Quinn,max.quinn266@example.com,(555) 0166-1266,Window cleaning,55,every 4 weeks,03/16/2023,Senior discount
+Paul Quinn,paul.quinn267@example.com,(555) 0167-1267,Weekly clean,135,weekly,11/04/2024,Commercial
+Paul Khan,paul.khan268@example.com,(555) 0168-1268,Fortnightly clean,135,Every 2 weeks,11/26/2021,Commercial
+Max Walsh,max.walsh269@example.com,(555) 0169-1269,Weekly clean,$115.00,weekly,06/24/2026,
+Cal Khan,cal.khan270@example.com,(555) 0170-1270,Window cleaning,55,every 4 weeks,08/02/2023,Commercial
+Uma Walsh,uma.walsh271@example.com,(555) 0171-1271,Fortnightly clean,145,every other week,08/04/2025,VIP
+Nina Upton,nina.upton272@example.com,(555) 0172-1272,Weekly clean,$110.00,weekly,03/10/2021,
+Grace Fox,grace.fox273@example.com,(555) 0173-1273,Office clean,340,weekly,2025-12-28,Commercial
+Lena Foster,lena.foster274@example.com,(555) 0174-1274,Weekly clean,120,weekly,2022-05-26,Commercial
+Daniel Grant,daniel.grant275@example.com,(555) 0175-1275,Fortnightly clean,$150.00,every other week,06/22/2018,Commercial
+Uma Hale,uma.hale276@example.com,(555) 0176-1276,Fortnightly clean,155,Bi-weekly,09/15/2019,
+Paul Ellis,paul.ellis277@example.com,(555) 0177-1277,Fortnightly clean,$145.00,Fortnightly,09/02/2024,Friends & family
+Hana Owens,hana.owens278@example.com,(555) 0178-1278,Monthly deep clean,$240.00,monthly,01/01/2019,Senior discount
+Dev Lewis,dev.lewis279@example.com,(555) 0179-1279,Weekly clean,$110.00,weekly,03/05/2022,Senior discount
+Pia Irving,pia.irving280@example.com,(555) 0180-1280,Monthly deep clean,$225.00,monthly,10/19/2025,Commercial
+Daniel Baker,daniel.baker281@example.com,(555) 0181-1281,Monthly deep clean,$245.00,monthly,05/06/2018,Commercial
+Max Fox,max.fox282@example.com,(555) 0182-1282,Weekly clean,$105.00,weekly,09/04/2018,
+Uma Adams,uma.adams283@example.com,(555) 0183-1283,Monthly deep clean,$180.00,monthly,02/15/2024,Key holder
+Chloe Doyle,chloe.doyle284@example.com,(555) 0184-1284,Fortnightly clean,$155.00,Fortnightly,06/27/2026,
+Cal Foster,cal.foster285@example.com,(555) 0185-1285,Weekly clean,$100.00,weekly,12/01/2017,Key holder
+Olive Nash,olive.nash286@example.com,(555) 0186-1286,Fortnightly clean,145,Every 2 weeks,09/27/2021,Commercial
+Kofi Owens,kofi.owens287@example.com,(555) 0187-1287,Weekly clean,115,weekly,07/10/2021,Key holder
+Esme Green,esme.green288@example.com,(555) 0188-1288,Fortnightly clean,135,Fortnightly,05/18/2024,
+Kofi Grant,kofi.grant289@example.com,(555) 0189-1289,Fortnightly clean,$135.00,Bi-weekly,09/17/2019,
+Jack Baker,jack.baker290@example.com,(555) 0190-1290,Fortnightly clean,160,Bi-weekly,08/06/2026,
+Ella Ellis,ella.ellis291@example.com,(555) 0191-1291,Window cleaning,$60.00,every 4 weeks,2025-04-30,
+Ben Patel,ben.patel292@example.com,(555) 0192-1292,Monthly deep clean,$220.00,monthly,2022-06-17,Senior discount
+Hana Shaw,hana.shaw293@example.com,(555) 0193-1293,Weekly clean,$120.00,weekly,02/21/2021,Commercial
+Gus James,gus.james294@example.com,(555) 0194-1294,Fortnightly clean,$125.00,Every 2 weeks,11/28/2022,Senior discount
+Esme Foster,esme.foster295@example.com,(555) 0195-1295,Monthly deep clean,$225.00,monthly,05/30/2022,VIP
+Ruby Morgan,ruby.morgan296@example.com,(555) 0196-1296,Weekly clean,$120.00,weekly,01/27/2022,Friends & family
+Ruby Morgan,ruby.morgan296@example.com,(555) 0196-1296,Weekly clean,$120.00,weekly,01/27/2022,Friends & family
+Gus Young,gus.young297@example.com,(555) 0197-1297,Fortnightly clean,$140.00,Fortnightly,03/04/2018,
+Gus Turner,gus.turner298@example.com,(555) 0198-1298,Fortnightly clean,115,every other week,04/01/2026,
+Ava Green,ava.green299@example.com,(555) 0199-1299,Fortnightly clean, $ 110 ,every other week,12/22/2025,
+Vic Walsh,vic.walsh300@example.com,(555) 0100-1300,Fortnightly clean, $ 150 ,every other week,03/05/2023,Commercial
+Paul Baker,paul.baker301@example.com,(555) 0101-1301,Fortnightly clean,$125.00,Fortnightly,04/03/2019,Commercial
+Kate Brooks,kate.brooks302@example.com,(555) 0102-1302,Weekly clean,110,weekly,07/27/2025,Friends & family
+Finn Young,finn.young303@example.com,(555) 0103-1303,Weekly clean,135,weekly,08/07/2021,VIP
+Fred Zhang,fred.zhang304@example.com,(555) 0104-1304,Fortnightly clean,160,Every 2 weeks,07/27/2018,Friends & family
+Wes Hale,wes.hale305@example.com,(555) 0105-1305,Fortnightly clean,$135.00,every other week,12/07/2021,Key holder
+Daniel Upton,daniel.upton306@example.com,(555) 0106-1306,Weekly clean,$120.00,weekly,01/24/2019,Friends & family
+Una Hale,una.hale307@example.com,(555) 0107-1307,Monthly deep clean,245,monthly,05/12/2018,VIP
+Omar Morgan,omar.morgan308@example.com,(555) 0108-1308,Window cleaning,80,every 4 weeks,10/13/2019,Friends & family
+Amir Ellis,amir.ellis309@example.com,(555) 0109-1309,Weekly clean,95,weekly,2020-01-09,Commercial
+Omar Young,omar.young310@example.com,(555) 0110-1310,Fortnightly clean,125,Fortnightly,07/13/2019,
+Cal Zhang,cal.zhang311@example.com,(555) 0111-1311,Monthly deep clean,$235.00,monthly,01/14/2024,
+Una Baker,una.baker312@example.com,(555) 0112-1312,Weekly clean,$110.00,weekly,04/16/2025,
+Sara Nash,sara.nash313@example.com,(555) 0113-1313,Fortnightly clean,120,Every 2 weeks,06/15/2023,Commercial
+Raj Shaw,raj.shaw314@example.com,(555) 0114-1314,Window cleaning, $ 55 ,every 4 weeks,04/08/2019,
+Chloe Patel,chloe.patel315@example.com,(555) 0115-1315,Monthly deep clean,$235.00,monthly,03/21/2021,Commercial
+Yusuf Khan,yusuf.khan316@example.com,(555) 0116-1316,Office clean,$415.00,weekly,03/20/2019,Commercial
+Esme Doyle,esme.doyle317@example.com,(555) 0117-1317,Weekly clean,110,weekly,02/09/2020,
+Pia Hale,pia.hale318@example.com,(555) 0118-1318,Window cleaning,50,every 4 weeks,2022-09-07,
+Isla Walsh,isla.walsh319@example.com,(555) 0119-1319,Fortnightly clean,$135.00,Bi-weekly,02/20/2019,Senior discount
+Jada Baker,jada.baker320@example.com,(555) 0120-1320,Window cleaning,$55.00,every 4 weeks,09/28/2025,Friends & family
+Uma Morgan,uma.morgan321@example.com,(555) 0121-1321,Weekly clean,$125.00,weekly,09/10/2023,Senior discount
+Dev Morgan,dev.morgan322@example.com,(555) 0122-1322,Window cleaning,$55.00,every 4 weeks,09/25/2019,
+Theo Carter,theo.carter323@example.com,(555) 0123-1323,Office clean, $ 290 ,weekly,12/05/2019,Commercial
+Quinn Patel,quinn.patel324@example.com,(555) 0124-1324,Weekly clean,130,weekly,09/01/2024,Key holder
+Finn Carter,finn.carter325@example.com,(555) 0125-1325,Weekly clean,$115.00,weekly,10/07/2026,
+Fred Adams,fred.adams326@example.com,(555) 0126-1326,Window cleaning,50,every 4 weeks,12/29/2019,
+Daniel Shaw,daniel.shaw327@example.com,(555) 0127-1327,Monthly deep clean,$235.00,monthly,06/04/2023,
+Isla Brooks,isla.brooks328@example.com,(555) 0128-1328,Office clean,470,weekly,06/07/2025,Commercial
+Pia Clarke,pia.clarke329@example.com,(555) 0129-1329,Window cleaning, $ 70 ,every 4 weeks,11/25/2025,Senior discount
+Mia Reid,mia.reid330@example.com,(555) 0130-1330,Office clean,265,weekly,2023-06-13,Commercial
+Isla Adams,isla.adams331@example.com,(555) 0131-1331,Fortnightly clean,$155.00,Every 2 weeks,2021-08-20,VIP
+Amir Morgan,amir.morgan332@example.com,(555) 0132-1332,Monthly deep clean,230,monthly,05/30/2020,Key holder
+Fred Hale,fred.hale333@example.com,(555) 0133-1333,Office clean,$290.00,weekly,04/15/2022,Commercial
+Olive Upton,olive.upton334@example.com,(555) 0134-1334,Fortnightly clean, $ 120 ,every other week,05/20/2025,
+Ruby Turner,ruby.turner335@example.com,(555) 0135-1335,Monthly deep clean,215,monthly,07/11/2023,
+Vic Carter,vic.carter336@example.com,(555) 0136-1336,Weekly clean,$100.00,weekly,02/13/2026,VIP
+Vic Brooks,vic.brooks337@example.com,(555) 0137-1337,Fortnightly clean,$145.00,Fortnightly,04/28/2026,
+Cal Grant,cal.grant338@example.com,(555) 0138-1338,Fortnightly clean,140,every other week,04/17/2023,Senior discount
+Uma Baker,uma.baker339@example.com,(555) 0139-1339,Weekly clean,110,weekly,02/06/2019,
+Max Patel,max.patel340@example.com,(555) 0140-1340,Fortnightly clean,$165.00,every other week,08/01/2025,Key holder
+Lena Zhang,lena.zhang341@example.com,(555) 0141-1341,Fortnightly clean,130,Bi-weekly,06/26/2023,Senior discount
+Cal Ellis,cal.ellis342@example.com,(555) 0142-1342,Fortnightly clean,125,every other week,04/15/2024,Friends & family
+Vic Fox,vic.fox343@example.com,(555) 0143-1343,Fortnightly clean,165,Every 2 weeks,02/23/2022,Commercial
+Ella Nash,ella.nash344@example.com,(555) 0144-1344,Window cleaning, $ 60 ,every 4 weeks,2024-02-13,
+Leo Fox,leo.fox345@example.com,(555) 0145-1345,Fortnightly clean, $ 155 ,every other week,12/28/2024,VIP
+Olive Patel,olive.patel346@example.com,(555) 0146-1346,Weekly clean,$110.00,weekly,11/24/2017,Senior discount
+Quinn Upton,quinn.upton347@example.com,(555) 0147-1347,Weekly clean,140,weekly,01/18/2022,
+Kate Doyle,kate.doyle348@example.com,(555) 0148-1348,Fortnightly clean,150,Fortnightly,12/13/2024,
+Harry Owens,harry.owens349@example.com,(555) 0149-1349,Window cleaning,60,every 4 weeks,06/02/2021,Key holder
+Max Owens,max.owens350@example.com,(555) 0150-1350,Weekly clean,135,weekly,03/06/2022,VIP
+Tara Doyle,tara.doyle351@example.com,(555) 0151-1351,Monthly deep clean,$255.00,monthly,04/28/2023,Friends & family
+Ruby Adams,ruby.adams352@example.com,(555) 0152-1352,Weekly clean, $ 95 ,weekly,04/01/2025,Key holder
+Esme Carter,esme.carter353@example.com,(555) 0153-1353,Weekly clean,$120.00,weekly,07/19/2024,VIP
+Dev Upton,dev.upton354@example.com,(555) 0154-1354,Fortnightly clean, $ 125 ,Fortnightly,02/07/2021,Friends & family
+Mia Shaw,mia.shaw355@example.com,(555) 0155-1355,Fortnightly clean,155,Fortnightly,01/05/2018,
+Finn Adams,finn.adams356@example.com,(555) 0156-1356,Fortnightly clean,$140.00,every other week,06/29/2022,
+Ian Turner,ian.turner357@example.com,(555) 0157-1357,Fortnightly clean,$135.00,every other week,12/02/2023,
+Grace Baker,grace.baker358@example.com,(555) 0158-1358,Fortnightly clean,155,Fortnightly,09/17/2018,Senior discount
+Sara Fox,sara.fox359@example.com,(555) 0159-1359,Window cleaning,$50.00,every 4 weeks,08/17/2023,Commercial
+Hana Davies,hana.davies360@example.com,(555) 0160-1360,Fortnightly clean,$110.00,Every 2 weeks,02/26/2026,
+Gus Quinn,gus.quinn361@example.com,(555) 0161-1361,Fortnightly clean,125,Bi-weekly,01/24/2020,Friends & family
+Wes Reid,wes.reid362@example.com,(555) 0162-1362,Fortnightly clean,$155.00,Every 2 weeks,11/24/2017,Senior discount
+Jack Foster,jack.foster363@example.com,(555) 0163-1363,Weekly clean,$135.00,weekly,02/01/2020,Key holder
+Dev Fox,dev.fox364@example.com,(555) 0164-1364,Fortnightly clean, $ 125 ,Bi-weekly,03/27/2021,VIP
+Una Adams,una.adams365@example.com,(555) 0165-1365,Weekly clean,$105.00,weekly,11/17/2022,
+Jack Hale,jack.hale366@example.com,(555) 0166-1366,Fortnightly clean,165,every other week,2018-06-18,
+Daniel Hale,daniel.hale367@example.com,(555) 0167-1367,Fortnightly clean, $ 140 ,Bi-weekly,12/02/2021,VIP
+Quinn Lewis,quinn.lewis368@example.com,(555) 0168-1368,Window cleaning,$65.00,every 4 weeks,01/03/2019,Key holder
+Uma Shaw,uma.shaw369@example.com,(555) 0169-1369,Window cleaning,65,every 4 weeks,08/16/2018,Commercial
+Uma Clarke,uma.clarke370@example.com,(555) 0170-1370,Fortnightly clean,160,Fortnightly,2026-09-24,Commercial
+Tara Walsh,tara.walsh371@example.com,(555) 0171-1371,Monthly deep clean,$235.00,monthly,08/29/2021,
+Daniel Brooks,daniel.brooks372@example.com,(555) 0172-1372,Fortnightly clean,155,every other week,2018-05-18,VIP
+,,,,,,,
+Uma Brooks,uma.brooks373@example.com,(555) 0173-1373,Fortnightly clean,$120.00,every other week,12/07/2024,Commercial
+Harry Walsh,harry.walsh374@example.com,(555) 0174-1374,Window cleaning,$65.00,every 4 weeks,09/04/2023,Commercial
+Olive Turner,olive.turner375@example.com,(555) 0175-1375,Weekly clean,$110.00,weekly,02/08/2021,Senior discount
+Ian Upton,ian.upton376@example.com,(555) 0176-1376,Fortnightly clean,165,Bi-weekly,02/28/2022,
+Leo Morgan,leo.morgan377@example.com,(555) 0177-1377,Fortnightly clean,$160.00,Every 2 weeks,03/05/2021,
+Quinn Ellis,quinn.ellis378@example.com,(555) 0178-1378,Fortnightly clean,135,Bi-weekly,12/14/2021,
+Isla Hale,isla.hale379@example.com,(555) 0179-1379,Office clean,$245.00,weekly,09/25/2022,Commercial
+Tara Owens,tara.owens380@example.com,(555) 0180-1380,Weekly clean,$135.00,weekly,08/21/2019,Commercial
+Lena Khan,lena.khan381@example.com,(555) 0181-1381,Office clean,$455.00,weekly,07/30/2020,Commercial
+Esme Hughes,esme.hughes382@example.com,(555) 0182-1382,Weekly clean,$105.00,weekly,09/15/2026,
+Uma Khan,uma.khan383@example.com,(555) 0183-1383,Weekly clean,95,weekly,04/16/2023,Senior discount
+Raj Hale,raj.hale384@example.com,(555) 0184-1384,Window cleaning,55,every 4 weeks,04/28/2023,Friends & family
+Ella Brooks,ella.brooks385@example.com,(555) 0185-1385,Fortnightly clean,150,every other week,06/13/2019,Commercial
+Kate Zhang,kate.zhang386@example.com,(555) 0186-1386,Monthly deep clean,205,monthly,08/17/2018,
+Jack Quinn,jack.quinn387@example.com,(555) 0187-1387,Monthly deep clean,250,monthly,2026-04-27,
+Jack Evans,jack.evans388@example.com,(555) 0188-1388,Office clean,$420.00,weekly,04/17/2026,Commercial
+Gus Lewis,gus.lewis389@example.com,(555) 0189-1389,Fortnightly clean,$145.00,every other week,06/16/2019,Commercial
+Nina Lewis,nina.lewis390@example.com,(555) 0190-1390,Fortnightly clean,165,Bi-weekly,2018-05-25,
+Dev Irving,dev.irving391@example.com,(555) 0191-1391,Fortnightly clean,$160.00,Fortnightly,04/19/2026,Key holder
+Kofi Brooks,kofi.brooks392@example.com,(555) 0192-1392,Window cleaning,60,every 4 weeks,02/17/2023,
+Leo Reid,leo.reid393@example.com,(555) 0193-1393,Monthly deep clean,205,monthly,11/15/2019,Commercial
+Leo Adams,leo.adams394@example.com,(555) 0194-1394,Office clean,220,weekly,08/26/2020,Commercial
+Fred Patel,fred.patel395@example.com,(555) 0195-1395,Fortnightly clean,$110.00,Bi-weekly,12/26/2022,
+Isla Quinn,isla.quinn396@example.com,(555) 0196-1396,Weekly clean,$120.00,weekly,04/16/2025,Key holder
+Una Shaw,una.shaw397@example.com,(555) 0197-1397,Fortnightly clean,$145.00,Fortnightly,07/22/2023,
+Amir Fox,amir.fox398@example.com,(555) 0198-1398,Window cleaning,$60.00,every 4 weeks,08/30/2026,Key holder
+Hana Hughes,hana.hughes399@example.com,(555) 0199-1399,Window cleaning,$70.00,every 4 weeks,03/05/2024,Friends & family
+Mia Zhang,mia.zhang400@example.com,(555) 0100-1400,Monthly deep clean,195,monthly,12/09/2020,
+Jada Shaw,jada.shaw401@example.com,(555) 0101-1401,Fortnightly clean,$155.00,Fortnightly,02/23/2021,
+Theo Fox,theo.fox402@example.com,(555) 0102-1402,Monthly deep clean,245,monthly,10/05/2018,
+Ava Carter,ava.carter403@example.com,(555) 0103-1403,Window cleaning,$70.00,every 4 weeks,05/18/2018,
+Omar Davies,omar.davies404@example.com,(555) 0104-1404,Weekly clean,$130.00,weekly,11/04/2023,
+Zoe Brooks,zoe.brooks405@example.com,(555) 0105-1405,Office clean,$420.00,weekly,03/28/2025,Commercial
+Zoe Brooks,zoe.brooks405@example.com,(555) 0105-1405,Office clean,$420.00,weekly,03/28/2025,Commercial
+Nina Green,nina.green406@example.com,(555) 0106-1406,Weekly clean,$95.00,weekly,2019-11-28,
+Lena Adams,lena.adams407@example.com,(555) 0107-1407,Weekly clean,$130.00,weekly,04/11/2026,Senior discount
+Gus Fox,gus.fox408@example.com,(555) 0108-1408,Monthly deep clean, $ 210 ,monthly,05/12/2018,Commercial
+Jada Morgan,jada.morgan409@example.com,(555) 0109-1409,Monthly deep clean,$200.00,monthly,12/18/2017,
+Kate Lewis,kate.lewis410@example.com,(555) 0110-1410,Fortnightly clean,$125.00,Every 2 weeks,10/26/2019,
+Noah Irving,noah.irving411@example.com,(555) 0111-1411,Monthly deep clean,$240.00,monthly,05/16/2018,
+Theo Green,theo.green412@example.com,(555) 0112-1412,Fortnightly clean,$150.00,Every 2 weeks,01/01/2024,Senior discount
+Fred Quinn,fred.quinn413@example.com,(555) 0113-1413,Weekly clean,$100.00,weekly,01/03/2018,Friends & family
+Hana Brooks,hana.brooks414@example.com,(555) 0114-1414,Fortnightly clean,$145.00,Every 2 weeks,06/04/2022,Commercial
+Wes Evans,wes.evans415@example.com,(555) 0115-1415,Fortnightly clean,$145.00,Every 2 weeks,02/02/2024,
+Isla Shaw,isla.shaw416@example.com,(555) 0116-1416,Window cleaning,45,every 4 weeks,06/16/2023,Key holder
+Bea Foster,bea.foster417@example.com,(555) 0117-1417,Fortnightly clean,$115.00,every other week,06/29/2024,Friends & family
+Fred James,fred.james418@example.com,(555) 0118-1418,Weekly clean,130,weekly,04/18/2025,
+Chloe Irving,chloe.irving419@example.com,(555) 0119-1419,Office clean,$470.00,weekly,12/15/2024,Commercial
+Amir Davies,amir.davies420@example.com,(555) 0120-1420,Fortnightly clean,165,every other week,2019-05-17,Friends & family
+Esme Walsh,esme.walsh421@example.com,(555) 0121-1421,Fortnightly clean,$135.00,Bi-weekly,03/01/2018,
+Ian Young,ian.young422@example.com,(555) 0122-1422,Fortnightly clean,$160.00,Fortnightly,07/20/2021,Commercial
+Uma Lewis,uma.lewis423@example.com,(555) 0123-1423,Fortnightly clean,$140.00,Fortnightly,02/03/2024,Senior discount
+Tara Green,tara.green424@example.com,(555) 0124-1424,Fortnightly clean,140,Every 2 weeks,12/07/2023,Friends & family
+Jack Irving,jack.irving425@example.com,(555) 0125-1425,Fortnightly clean,$130.00,Fortnightly,03/20/2024,Key holder
+Cal Baker,cal.baker426@example.com,(555) 0126-1426,Window cleaning,50,every 4 weeks,10/21/2022,Friends & family
+Finn Morgan,finn.morgan427@example.com,(555) 0127-1427,Monthly deep clean,$240.00,monthly,2022-02-01,Friends & family
+Chloe Clarke,chloe.clarke428@example.com,(555) 0128-1428,Fortnightly clean,110,every other week,11/09/2020,
+Daniel Evans,daniel.evans429@example.com,(555) 0129-1429,Office clean,300,weekly,07/21/2023,Commercial
+Ava Turner,ava.turner430@example.com,(555) 0130-1430,Weekly clean,$100.00,weekly,2018-02-06,
+Bea Grant,bea.grant431@example.com,(555) 0131-1431,Weekly clean,120,weekly,2017-12-02,Friends & family
+Ben Upton,ben.upton432@example.com,(555) 0132-1432,Fortnightly clean,$110.00,Fortnightly,08/01/2023,
+Dev Evans,dev.evans433@example.com,(555) 0133-1433,Weekly clean, $ 120 ,weekly,06/11/2019,
+Sara Green,sara.green434@example.com,(555) 0134-1434,Office clean, $ 245 ,weekly,02/19/2025,Commercial
+Leo Evans,leo.evans435@example.com,(555) 0135-1435,Weekly clean, $ 100 ,weekly,04/16/2022,
+Sam Evans,sam.evans436@example.com,(555) 0136-1436,Fortnightly clean,145,Bi-weekly,10/26/2021,
+Finn Zhang,finn.zhang437@example.com,(555) 0137-1437,Fortnightly clean, $ 130 ,Fortnightly,10/20/2021,
+Pia Lewis,pia.lewis438@example.com,(555) 0138-1438,Fortnightly clean,135,every other week,2019-12-27,VIP
+Chloe Lewis,chloe.lewis439@example.com,(555) 0139-1439,Weekly clean,100,weekly,08/10/2021,
+Leo Doyle,leo.doyle440@example.com,(555) 0140-1440,Fortnightly clean,$110.00,every other week,12/09/2020,Key holder
+Noah Hughes,noah.hughes441@example.com,(555) 0141-1441,Window cleaning,55,every 4 weeks,2022-02-20,
+Raj Khan,raj.khan442@example.com,(555) 0142-1442,Window cleaning,70,every 4 weeks,09/15/2025,
+Ian Ellis,ian.ellis443@example.com,(555) 0143-1443,Monthly deep clean,200,monthly,2019-03-24,Commercial
+Quinn Quinn,quinn.quinn444@example.com,(555) 0144-1444,Weekly clean,100,weekly,03/13/2019,Key holder
+Ben Vance,ben.vance445@example.com,(555) 0145-1445,Office clean,$220.00,weekly,05/10/2018,Commercial
+Theo Zhang,theo.zhang446@example.com,(555) 0146-1446,Fortnightly clean,$130.00,Every 2 weeks,09/09/2022,
+Hana Evans,hana.evans447@example.com,(555) 0147-1447,Weekly clean,130,weekly,11/18/2020,VIP
+Mia Brooks,mia.brooks448@example.com,(555) 0148-1448,Monthly deep clean,$235.00,monthly,02/20/2026,VIP
+Cal Irving,cal.irving449@example.com,(555) 0149-1449,Fortnightly clean,125,Every 2 weeks,09/02/2022,Key holder
+Theo Quinn,theo.quinn450@example.com,(555) 0150-1450,Weekly clean,115,weekly,08/06/2023,Senior discount
+Hana Turner,hana.turner451@example.com,(555) 0151-1451,Fortnightly clean,$165.00,every other week,05/29/2019,
+Max Shaw,max.shaw452@example.com,(555) 0152-1452,Weekly clean,$125.00,weekly,05/12/2023,Friends & family
+Mia Fox,mia.fox453@example.com,(555) 0153-1453,Weekly clean,$95.00,weekly,06/20/2025,
+Finn Hughes,finn.hughes454@example.com,(555) 0154-1454,Monthly deep clean,$195.00,monthly,10/01/2024,
+Quinn Owens,quinn.owens455@example.com,(555) 0155-1455,Fortnightly clean,$115.00,Bi-weekly,11/22/2025,
+Yusuf Turner,yusuf.turner456@example.com,(555) 0156-1456,Weekly clean,$95.00,weekly,01/29/2025,Friends & family
+Finn Foster,finn.foster457@example.com,(555) 0157-1457,Office clean,$220.00,weekly,04/21/2022,Commercial
+Jada Khan,jada.khan458@example.com,(555) 0158-1458,Window cleaning,75,every 4 weeks,01/05/2026,Senior discount
+Ben Foster,ben.foster459@example.com,(555) 0159-1459,Fortnightly clean,$130.00,Fortnightly,2022-04-24,VIP
+Ian Vance,ian.vance460@example.com,(555) 0160-1460,Office clean,$425.00,weekly,2025-09-23,Commercial
+Chloe Morgan,chloe.morgan461@example.com,(555) 0161-1461,Office clean,$250.00,weekly,09/12/2020,Commercial
+Ruby Lewis,ruby.lewis462@example.com,(555) 0162-1462,Fortnightly clean,$110.00,Fortnightly,05/30/2023,VIP
+Ella Turner,ella.turner463@example.com,(555) 0163-1463,Fortnightly clean,120,Every 2 weeks,06/13/2024,VIP
+Mia Upton,mia.upton464@example.com,(555) 0164-1464,Weekly clean,$135.00,weekly,09/07/2018,Commercial
+Jack Green,jack.green465@example.com,(555) 0165-1465,Fortnightly clean,125,Bi-weekly,05/14/2019,Friends & family
+Dev Shaw,dev.shaw466@example.com,(555) 0166-1466,Monthly deep clean,$190.00,monthly,11/13/2025,
+Amir Reid,amir.reid467@example.com,(555) 0167-1467,Window cleaning, $ 65 ,every 4 weeks,07/25/2025,VIP
+Wes Shaw,wes.shaw468@example.com,(555) 0168-1468,Fortnightly clean,$115.00,every other week,10/13/2021,Friends & family
+Zoe Owens,zoe.owens469@example.com,(555) 0169-1469,Fortnightly clean,$120.00,Bi-weekly,2017-11-23,
+Esme Brooks,esme.brooks470@example.com,(555) 0170-1470,Weekly clean,$110.00,weekly,07/18/2018,VIP
+Daniel Hughes,daniel.hughes471@example.com,(555) 0171-1471,Monthly deep clean,215,monthly,12/13/2024,
+Kate Nash,kate.nash472@example.com,(555) 0172-1472,Window cleaning,70,every 4 weeks,03/27/2019,Senior discount
+Harry Carter,harry.carter473@example.com,(555) 0173-1473,Fortnightly clean,150,Every 2 weeks,08/01/2022,
+Raj Owens,raj.owens474@example.com,(555) 0174-1474,Office clean,$315.00,weekly,11/10/2020,Commercial
+Dev Khan,dev.khan475@example.com,(555) 0175-1475,Weekly clean,$100.00,weekly,01/20/2023,Commercial
+Omar Walsh,omar.walsh476@example.com,(555) 0176-1476,Monthly deep clean,$180.00,monthly,10/31/2019,Friends & family
+Tara Morgan,tara.morgan477@example.com,(555) 0177-1477,Weekly clean,$140.00,weekly,01/14/2019,
+Paul Davies,paul.davies478@example.com,(555) 0178-1478,Window cleaning,65,every 4 weeks,04/07/2023,Senior discount
+Pia Carter,pia.carter479@example.com,(555) 0179-1479,Window cleaning,$80.00,every 4 weeks,03/07/2019,Key holder
+Amir Carter,amir.carter480@example.com,(555) 0180-1480,Weekly clean,$140.00,weekly,05/04/2019,
+Leo Patel,leo.patel481@example.com,(555) 0181-1481,Office clean,350,weekly,10/22/2021,Commercial
+Quinn Walsh,quinn.walsh482@example.com,(555) 0182-1482,Fortnightly clean,$150.00,every other week,11/18/2025,
+Raj James,raj.james483@example.com,(555) 0183-1483,Weekly clean,140,weekly,05/08/2022,VIP
+Max Carter,max.carter484@example.com,(555) 0184-1484,Weekly clean,95,weekly,06/17/2021,
+Lena Owens,lena.owens485@example.com,(555) 0185-1485,Monthly deep clean,$250.00,monthly,05/04/2018,Commercial
+Kofi Hale,kofi.hale486@example.com,(555) 0186-1486,Fortnightly clean,$155.00,Bi-weekly,01/19/2022,
+Uma Young,uma.young487@example.com,(555) 0187-1487,Weekly clean,$140.00,weekly,2025-06-13,Commercial
+Finn James,finn.james488@example.com,(555) 0188-1488,Fortnightly clean,$135.00,Fortnightly,08/11/2021,Senior discount
+Isla Nash,isla.nash489@example.com,(555) 0189-1489,Fortnightly clean,130,Bi-weekly,05/01/2021,VIP
+Ian Shaw,ian.shaw490@example.com,(555) 0190-1490,Monthly deep clean, $ 180 ,monthly,03/27/2018,
+Ava Owens,ava.owens491@example.com,(555) 0191-1491,Window cleaning, $ 80 ,every 4 weeks,02/28/2026,
+Uma Green,uma.green492@example.com,(555) 0192-1492,Weekly clean,105,weekly,11/19/2024,Friends & family
+Ruby Fox,ruby.fox493@example.com,(555) 0193-1493,Weekly clean,$125.00,weekly,04/07/2018,Friends & family
+Jada James,jada.james494@example.com,(555) 0194-1494,Weekly clean,120,weekly,04/03/2020,
+Grace Doyle,grace.doyle495@example.com,(555) 0195-1495,Fortnightly clean,$135.00,Bi-weekly,12/12/2020,
+,,,,,,,
+Sam Foster,sam.foster496@example.com,(555) 0196-1496,Fortnightly clean, $ 165 ,Every 2 weeks,2024-12-02,Commercial
+Ava Shaw,ava.shaw497@example.com,(555) 0197-1497,Weekly clean,105,weekly,06/25/2021,Key holder
+Ella Zhang,ella.zhang498@example.com,(555) 0198-1498,Fortnightly clean,$150.00,every other week,2017-11-19,VIP
+Una Grant,una.grant499@example.com,(555) 0199-1499,Window cleaning, $ 65 ,every 4 weeks,08/16/2024,
+Omar Lewis,omar.lewis500@example.com,(555) 0100-1500,Weekly clean,$125.00,weekly,12/11/2024,VIP
+Pia Adams,pia.adams501@example.com,(555) 0101-1501,Fortnightly clean, $ 150 ,every other week,2019-07-25,Commercial
+Gus Vance,gus.vance502@example.com,(555) 0102-1502,Monthly deep clean,260,monthly,05/15/2026,
+Theo Clarke,theo.clarke503@example.com,(555) 0103-1503,Fortnightly clean,$125.00,Fortnightly,11/14/2019,Commercial
+Daniel Lewis,daniel.lewis504@example.com,(555) 0104-1504,Weekly clean,$125.00,weekly,02/01/2023,Key holder
+Esme Young,esme.young505@example.com,(555) 0105-1505,Fortnightly clean,$140.00,Every 2 weeks,03/29/2021,Key holder
+Jada Evans,jada.evans506@example.com,(555) 0106-1506,Fortnightly clean, $ 115 ,Every 2 weeks,07/12/2019,
+Jada Evans,jada.evans506@example.com,(555) 0106-1506,Fortnightly clean, $ 115 ,Every 2 weeks,07/12/2019,
+Vic Davies,vic.davies507@example.com,(555) 0107-1507,Office clean,230,weekly,06/21/2023,Commercial
+Grace Adams,grace.adams508@example.com,(555) 0108-1508,Window cleaning,$80.00,every 4 weeks,08/05/2019,
+Pia Hughes,pia.hughes509@example.com,(555) 0109-1509,Fortnightly clean,$140.00,Every 2 weeks,09/23/2022,
+Harry Hughes,harry.hughes510@example.com,(555) 0110-1510,Weekly clean,115,weekly,06/07/2023,VIP
+Lena Vance,lena.vance511@example.com,(555) 0111-1511,Weekly clean,$125.00,weekly,07/27/2022,VIP
+Jada Irving,jada.irving512@example.com,(555) 0112-1512,Weekly clean,$140.00,weekly,04/24/2022,Senior discount
+Finn Evans,finn.evans513@example.com,(555) 0113-1513,Fortnightly clean,$160.00,every other week,11/22/2020,
+Jack Hughes,jack.hughes514@example.com,(555) 0114-1514,Fortnightly clean,165,Fortnightly,06/23/2019,Friends & family
+Olive Grant,olive.grant515@example.com,(555) 0115-1515,Fortnightly clean,$145.00,Fortnightly,06/27/2020,Senior discount
+Wes Lewis,wes.lewis516@example.com,(555) 0116-1516,Weekly clean,$140.00,weekly,03/09/2021,Senior discount
+Leo Walsh,leo.walsh517@example.com,(555) 0117-1517,Fortnightly clean,135,Fortnightly,05/28/2023,
+Kofi Clarke,kofi.clarke518@example.com,(555) 0118-1518,Monthly deep clean,$190.00,monthly,12/07/2019,Senior discount
+Yusuf Zhang,yusuf.zhang519@example.com,(555) 0119-1519,Window cleaning,45,every 4 weeks,12/21/2018,
+Uma Vance,uma.vance520@example.com,(555) 0120-1520,Fortnightly clean,155,Bi-weekly,02/04/2024,
+Leo Nash,leo.nash521@example.com,(555) 0121-1521,Fortnightly clean,155,every other week,2018-05-11,Commercial
+Una Davies,una.davies522@example.com,(555) 0122-1522,Weekly clean,105,weekly,06/25/2018,
+Jada Carter,jada.carter523@example.com,(555) 0123-1523,Monthly deep clean,$235.00,monthly,09/23/2018,
+Esme Lewis,esme.lewis524@example.com,(555) 0124-1524,Fortnightly clean,$155.00,Every 2 weeks,2020-11-01,Key holder
+Yusuf Carter,yusuf.carter525@example.com,(555) 0125-1525,Weekly clean,$105.00,weekly,03/16/2025,
+Kate Hale,kate.hale526@example.com,(555) 0126-1526,Monthly deep clean,210,monthly,09/19/2024,Senior discount
+Wes Fox,wes.fox527@example.com,(555) 0127-1527,Office clean,$405.00,weekly,10/09/2026,Commercial
+Fred Green,fred.green528@example.com,(555) 0128-1528,Weekly clean,115,weekly,03/07/2018,
+Ian James,ian.james529@example.com,(555) 0129-1529,Weekly clean,135,weekly,12/20/2023,Senior discount
+Grace Nash,grace.nash530@example.com,(555) 0130-1530,Monthly deep clean,$240.00,monthly,03/01/2020,Key holder
+Noah Doyle,noah.doyle531@example.com,(555) 0131-1531,Weekly clean,$130.00,weekly,06/27/2023,Friends & family
+Ian Evans,ian.evans532@example.com,(555) 0132-1532,Weekly clean,$110.00,weekly,09/09/2018,Key holder
+Raj Doyle,raj.doyle533@example.com,(555) 0133-1533,Fortnightly clean, $ 115 ,Every 2 weeks,06/09/2021,
+Ruby Irving,ruby.irving534@example.com,(555) 0134-1534,Weekly clean,135,weekly,12/05/2023,Senior discount
+Zoe Irving,zoe.irving535@example.com,(555) 0135-1535,Window cleaning,$70.00,every 4 weeks,02/24/2022,
+Nina Foster,nina.foster536@example.com,(555) 0136-1536,Window cleaning,$50.00,every 4 weeks,12/03/2020,
+Ava Quinn,ava.quinn537@example.com,(555) 0137-1537,Monthly deep clean,$260.00,monthly,06/18/2023,Commercial
+Yusuf Vance,yusuf.vance538@example.com,(555) 0138-1538,Weekly clean,140,weekly,2019-12-25,Commercial
+Ruby Clarke,ruby.clarke539@example.com,(555) 0139-1539,Window cleaning,55,every 4 weeks,12/30/2025,
+Ian Fox,ian.fox540@example.com,(555) 0140-1540,Office clean,$330.00,weekly,06/24/2020,Commercial
+Quinn Grant,quinn.grant541@example.com,(555) 0141-1541,Weekly clean,95,weekly,11/01/2024,
+Bea Zhang,bea.zhang542@example.com,(555) 0142-1542,Weekly clean,$130.00,weekly,09/20/2024,Commercial
+Sam Hale,sam.hale543@example.com,(555) 0143-1543,Weekly clean,$95.00,weekly,08/10/2018,
+Cal Quinn,cal.quinn544@example.com,(555) 0144-1544,Fortnightly clean,$150.00,Bi-weekly,03/09/2025,Key holder
+Yusuf Grant,yusuf.grant545@example.com,(555) 0145-1545,Window cleaning,50,every 4 weeks,06/19/2022,Key holder
+Omar Upton,omar.upton546@example.com,(555) 0146-1546,Fortnightly clean,$155.00,Every 2 weeks,06/29/2019,
+Chloe Reid,chloe.reid547@example.com,(555) 0147-1547,Weekly clean,$135.00,weekly,2021-04-16,Commercial
+Quinn Khan,quinn.khan548@example.com,(555) 0148-1548,Monthly deep clean,$240.00,monthly,05/04/2024,Friends & family
+Nina Carter,nina.carter549@example.com,(555) 0149-1549,Monthly deep clean,220,monthly,2025-04-08,VIP
+Wes Owens,wes.owens550@example.com,(555) 0150-1550,Weekly clean,$105.00,weekly,11/06/2019,Friends & family
+Sam Brooks,sam.brooks551@example.com,(555) 0151-1551,Fortnightly clean,150,Fortnightly,12/10/2017,Senior discount
+Max Adams,max.adams552@example.com,(555) 0152-1552,Monthly deep clean, $ 225 ,monthly,05/11/2024,
+Theo Owens,theo.owens553@example.com,(555) 0153-1553,Weekly clean, $ 120 ,weekly,07/04/2020,
+Amir Doyle,amir.doyle554@example.com,(555) 0154-1554,Weekly clean,125,weekly,10/03/2022,Key holder
+Gus Morgan,gus.morgan555@example.com,(555) 0155-1555,Office clean,$220.00,weekly,04/25/2024,Commercial
+Omar Zhang,omar.zhang556@example.com,(555) 0156-1556,Fortnightly clean, $ 115 ,Every 2 weeks,04/19/2025,VIP
+Fred Clarke,fred.clarke557@example.com,(555) 0157-1557,Fortnightly clean,150,every other week,10/07/2026,Key holder
+Ruby Shaw,ruby.shaw558@example.com,(555) 0158-1558,Monthly deep clean,235,monthly,12/09/2025,Key holder
+Quinn Brooks,quinn.brooks559@example.com,(555) 0159-1559,Window cleaning,$45.00,every 4 weeks,08/31/2023,
+Jada Fox,jada.fox560@example.com,(555) 0160-1560,Fortnightly clean,$125.00,Fortnightly,01/30/2026,
+Ruby Walsh,ruby.walsh561@example.com,(555) 0161-1561,Fortnightly clean,$145.00,Fortnightly,05/25/2023,
+Ava Ellis,ava.ellis562@example.com,(555) 0162-1562,Weekly clean,$120.00,weekly,10/26/2023,VIP
+Nina Young,nina.young563@example.com,(555) 0163-1563,Weekly clean,$125.00,weekly,08/06/2018,Senior discount
+Harry Vance,harry.vance564@example.com,(555) 0164-1564,Weekly clean,135,weekly,04/18/2024,
+Quinn Davies,quinn.davies565@example.com,(555) 0165-1565,Fortnightly clean,125,Bi-weekly,08/15/2023,Commercial
+Wes Adams,wes.adams566@example.com,(555) 0166-1566,Fortnightly clean,125,Every 2 weeks,09/21/2018,Key holder
+Ben Turner,ben.turner567@example.com,(555) 0167-1567,Weekly clean,$135.00,weekly,05/03/2021,
+Theo Baker,theo.baker568@example.com,(555) 0168-1568,Monthly deep clean,$190.00,monthly,2019-11-23,
+Max Hughes,max.hughes569@example.com,(555) 0169-1569,Weekly clean,$115.00,weekly,02/05/2024,
+Raj Grant,raj.grant570@example.com,(555) 0170-1570,Fortnightly clean,120,Every 2 weeks,06/10/2019,
+Theo Irving,theo.irving571@example.com,(555) 0171-1571,Window cleaning,$70.00,every 4 weeks,01/04/2024,Friends & family
+Yusuf Upton,yusuf.upton572@example.com,(555) 0172-1572,Weekly clean,95,weekly,01/03/2024,Friends & family
+Chloe Brooks,chloe.brooks573@example.com,(555) 0173-1573,Monthly deep clean, $ 200 ,monthly,02/03/2018,
+Kofi Foster,kofi.foster574@example.com,(555) 0174-1574,Monthly deep clean,195,monthly,2022-07-31,
+Harry Doyle,harry.doyle575@example.com,(555) 0175-1575,Fortnightly clean,$135.00,Fortnightly,09/29/2019,
+Finn Clarke,finn.clarke576@example.com,(555) 0176-1576,Office clean,230,weekly,11/30/2020,Commercial
+Olive Irving,olive.irving577@example.com,(555) 0177-1577,Weekly clean, $ 120 ,weekly,2024-01-09,
+Tara James,tara.james578@example.com,(555) 0178-1578,Fortnightly clean,135,Every 2 weeks,05/17/2019,VIP
+Gus Green,gus.green579@example.com,(555) 0179-1579,Weekly clean,$110.00,weekly,2023-01-23,
+Pia Baker,pia.baker580@example.com,(555) 0180-1580,Fortnightly clean,130,every other week,09/26/2020,
+Yusuf Reid,yusuf.reid581@example.com,(555) 0181-1581,Weekly clean,$140.00,weekly,11/05/2019,Key holder
+Yusuf Walsh,yusuf.walsh582@example.com,(555) 0182-1582,Window cleaning,55,every 4 weeks,11/12/2024,
+Una Ellis,una.ellis583@example.com,(555) 0183-1583,Monthly deep clean,255,monthly,11/16/2019,
+Harry Lewis,harry.lewis584@example.com,(555) 0184-1584,Office clean,$385.00,weekly,07/29/2023,Commercial
+Ella Clarke,ella.clarke585@example.com,(555) 0185-1585,Window cleaning,$50.00,every 4 weeks,06/16/2025,Key holder
+Tara Evans,tara.evans586@example.com,(555) 0186-1586,Office clean,$220.00,weekly,08/28/2024,Commercial
+Vic Baker,vic.baker587@example.com,(555) 0187-1587,Fortnightly clean,$115.00,every other week,02/01/2018,Commercial
+Zoe Walsh,zoe.walsh588@example.com,(555) 0188-1588,Office clean,455,weekly,04/17/2025,Commercial
+,,,,,,,
+Tara Irving,tara.irving589@example.com,(555) 0189-1589,Fortnightly clean,$125.00,Every 2 weeks,2021-10-06,
+Sara Young,sara.young590@example.com,(555) 0190-1590,Weekly clean,$105.00,weekly,05/22/2025,VIP
+Isla Zhang,isla.zhang591@example.com,(555) 0191-1591,Fortnightly clean,120,Every 2 weeks,03/05/2024,Key holder
+Kate Grant,kate.grant592@example.com,(555) 0192-1592,Fortnightly clean,$160.00,Bi-weekly,09/20/2025,Commercial
+Ben Evans,ben.evans593@example.com,(555) 0193-1593,Fortnightly clean,$125.00,every other week,04/15/2018,
+Isla Khan,isla.khan594@example.com,(555) 0194-1594,Weekly clean,100,weekly,10/25/2018,
+Dev Hale,dev.hale595@example.com,(555) 0195-1595,Weekly clean,$130.00,weekly,07/13/2021,
+Wes Hughes,wes.hughes596@example.com,(555) 0196-1596,Weekly clean,135,weekly,12/14/2019,VIP
+Max Evans,max.evans597@example.com,(555) 0197-1597,Weekly clean,$130.00,weekly,04/30/2022,Key holder
+Daniel Irving,daniel.irving598@example.com,(555) 0198-1598,Weekly clean,$115.00,weekly,11/02/2020,Senior discount
+Ian Morgan,ian.morgan599@example.com,(555) 0199-1599,Fortnightly clean,155,every other week,04/20/2021,
+Mia Vance,mia.vance600@example.com,(555) 0100-1600,Fortnightly clean,$165.00,Fortnightly,08/12/2021,Commercial
+Ian Patel,ian.patel601@example.com,(555) 0101-1601,Fortnightly clean,$120.00,Fortnightly,2017-11-30,
+Ben Lewis,ben.lewis602@example.com,(555) 0102-1602,Fortnightly clean,$125.00,Fortnightly,07/19/2021,Key holder
+Olive Ellis,olive.ellis603@example.com,(555) 0103-1603,Office clean,455,weekly,2023-10-09,Commercial
+Vic Patel,vic.patel604@example.com,(555) 0104-1604,Window cleaning,80,every 4 weeks,03/14/2025,VIP
+Sara James,sara.james605@example.com,(555) 0105-1605,Fortnightly clean,$140.00,every other week,12/19/2018,Senior discount
+Daniel Adams,daniel.adams606@example.com,(555) 0106-1606,Weekly clean,110,weekly,10/14/2024,Commercial
+Kofi Nash,kofi.nash607@example.com,(555) 0107-1607,Weekly clean,$115.00,weekly,2024-12-07,VIP
+Lena Green,lena.green608@example.com,(555) 0108-1608,Weekly clean,$140.00,weekly,06/19/2023,
+Quinn Hughes,quinn.hughes609@example.com,(555) 0109-1609,Fortnightly clean,130,Every 2 weeks,12/29/2023,Key holder
+Esme Ellis,esme.ellis610@example.com,(555) 0110-1610,Fortnightly clean,$135.00,Bi-weekly,08/06/2025,
+Raj Upton,raj.upton611@example.com,(555) 0111-1611,Fortnightly clean, $ 160 ,every other week,06/16/2018,
+Vic Vance,vic.vance612@example.com,(555) 0112-1612,Fortnightly clean, $ 150 ,Fortnightly,10/27/2023,
+Mia James,mia.james613@example.com,(555) 0113-1613,Fortnightly clean,145,Bi-weekly,08/09/2025,Friends & family
+Amir Young,amir.young614@example.com,(555) 0114-1614,Office clean,$370.00,weekly,07/16/2019,Commercial
+Jack Vance,jack.vance615@example.com,(555) 0115-1615,Fortnightly clean,130,every other week,08/30/2018,Commercial
+Bea Turner,bea.turner616@example.com,(555) 0116-1616,Weekly clean,$130.00,weekly,07/01/2019,Senior discount
+Finn Owens,finn.owens617@example.com,(555) 0117-1617,Weekly clean,$130.00,weekly,07/13/2018,Key holder
+Chloe James,chloe.james618@example.com,(555) 0118-1618,Weekly clean,$100.00,weekly,08/29/2026,Commercial
+Kofi Davies,kofi.davies619@example.com,(555) 0119-1619,Weekly clean,$100.00,weekly,03/30/2026,VIP
+Ian Quinn,ian.quinn620@example.com,(555) 0120-1620,Fortnightly clean,$115.00,Fortnightly,05/25/2018,VIP
+Finn Green,finn.green621@example.com,(555) 0121-1621,Fortnightly clean,165,every other week,09/28/2021,
+Raj Carter,raj.carter622@example.com,(555) 0122-1622,Weekly clean,110,weekly,07/30/2022,
+Sara Owens,sara.owens623@example.com,(555) 0123-1623,Window cleaning,45,every 4 weeks,06/13/2022,Friends & family
+Kofi Green,kofi.green624@example.com,(555) 0124-1624,Weekly clean,$110.00,weekly,03/17/2022,
+Ian Irving,ian.irving625@example.com,(555) 0125-1625,Fortnightly clean,$140.00,Every 2 weeks,02/26/2020,Key holder
+Ella Baker,ella.baker626@example.com,(555) 0126-1626,Weekly clean,$100.00,weekly,06/30/2020,Commercial
+Jada Lewis,jada.lewis627@example.com,(555) 0127-1627,Window cleaning,60,every 4 weeks,11/26/2020,Commercial
+Lena Ellis,lena.ellis628@example.com,(555) 0128-1628,Window cleaning,$75.00,every 4 weeks,06/25/2022,Commercial
+Isla Davies,isla.davies629@example.com,(555) 0129-1629,Weekly clean,125,weekly,03/26/2023,
+Theo Evans,theo.evans630@example.com,(555) 0130-1630,Fortnightly clean,$160.00,every other week,03/03/2022,VIP
+Chloe Green,chloe.green631@example.com,(555) 0131-1631,Fortnightly clean,125,Every 2 weeks,2026-08-27,Commercial
+Yusuf Irving,yusuf.irving632@example.com,(555) 0132-1632,Fortnightly clean,$150.00,every other week,04/15/2026,
+Fred Irving,fred.irving633@example.com,(555) 0133-1633,Weekly clean,$100.00,weekly,05/28/2019,
+Fred Irving,fred.irving633@example.com,(555) 0133-1633,Weekly clean,$100.00,weekly,05/28/2019,
+Kofi Baker,kofi.baker634@example.com,(555) 0134-1634,Window cleaning,80,every 4 weeks,12/04/2017,VIP
+Paul Shaw,paul.shaw635@example.com,(555) 0135-1635,Fortnightly clean,$130.00,every other week,05/07/2025,
+Ben Owens,ben.owens636@example.com,(555) 0136-1636,Fortnightly clean, $ 150 ,Fortnightly,08/14/2020,Senior discount
+Sara Patel,sara.patel637@example.com,(555) 0137-1637,Fortnightly clean,120,Fortnightly,07/25/2023,Senior discount
+Ruby Quinn,ruby.quinn638@example.com,(555) 0138-1638,Office clean,355,weekly,10/18/2025,Commercial
+Olive Clarke,olive.clarke639@example.com,(555) 0139-1639,Weekly clean,$115.00,weekly,02/24/2022,Commercial
+Grace Grant,grace.grant640@example.com,(555) 0140-1640,Monthly deep clean,255,monthly,11/08/2017,Commercial
+Bea Khan,bea.khan641@example.com,(555) 0141-1641,Window cleaning,80,every 4 weeks,2024-06-21,
+Nina Hughes,nina.hughes642@example.com,(555) 0142-1642,Office clean,395,weekly,08/23/2026,Commercial
+Wes Walsh,wes.walsh643@example.com,(555) 0143-1643,Window cleaning,$65.00,every 4 weeks,02/23/2026,
+Sara Baker,sara.baker644@example.com,(555) 0144-1644,Office clean,$430.00,weekly,2022-04-11,Commercial
+Nina Vance,nina.vance645@example.com,(555) 0145-1645,Window cleaning,65,every 4 weeks,05/19/2019,
+Nina Turner,nina.turner646@example.com,(555) 0146-1646,Weekly clean,115,weekly,03/03/2022,Key holder
+Mia Green,mia.green647@example.com,(555) 0147-1647,Weekly clean,140,weekly,06/16/2019,Key holder
+Quinn Young,quinn.young648@example.com,(555) 0148-1648,Window cleaning,$60.00,every 4 weeks,06/11/2023,VIP
+Theo James,theo.james649@example.com,(555) 0149-1649,Weekly clean,$120.00,weekly,07/12/2019,Commercial
+Ben Nash,ben.nash650@example.com,(555) 0150-1650,Office clean,225,weekly,08/16/2024,Commercial
+Ben Baker,ben.baker651@example.com,(555) 0151-1651,Window cleaning,70,every 4 weeks,03/29/2025,
+Sam Davies,sam.davies652@example.com,(555) 0152-1652,Weekly clean,120,weekly,09/06/2019,Senior discount
+Grace Lewis,grace.lewis653@example.com,(555) 0153-1653,Fortnightly clean,165,Fortnightly,10/17/2023,
+Ella Fox,ella.fox654@example.com,(555) 0154-1654,Fortnightly clean,$165.00,Fortnightly,08/02/2022,
+Isla Hughes,isla.hughes655@example.com,(555) 0155-1655,Fortnightly clean,$160.00,Bi-weekly,11/15/2023,VIP
+Daniel Zhang,daniel.zhang656@example.com,(555) 0156-1656,Fortnightly clean,$120.00,Every 2 weeks,09/25/2019,Friends & family
+Olive James,olive.james657@example.com,(555) 0157-1657,Fortnightly clean,130,Every 2 weeks,04/11/2019,
+Ruby Doyle,ruby.doyle658@example.com,(555) 0158-1658,Weekly clean,125,weekly,10/09/2026,
+Chloe Shaw,chloe.shaw659@example.com,(555) 0159-1659,Fortnightly clean,120,Fortnightly,04/20/2026,
+Dev Clarke,dev.clarke660@example.com,(555) 0160-1660,Fortnightly clean,$150.00,Bi-weekly,11/05/2022,
+Chloe Baker,chloe.baker661@example.com,(555) 0161-1661,Window cleaning,$80.00,every 4 weeks,05/21/2025,
+Gus Shaw,gus.shaw662@example.com,(555) 0162-1662,Fortnightly clean,$110.00,Bi-weekly,11/21/2021,Friends & family
+Ella James,ella.james663@example.com,(555) 0163-1663,Fortnightly clean,140,Bi-weekly,08/31/2020,Commercial
+Kate Khan,kate.khan664@example.com,(555) 0164-1664,Weekly clean,115,weekly,2025-09-23,
+Mia Baker,mia.baker665@example.com,(555) 0165-1665,Monthly deep clean,$210.00,monthly,04/09/2018,Friends & family
+Omar Clarke,omar.clarke666@example.com,(555) 0166-1666,Fortnightly clean,155,Bi-weekly,03/10/2025,
+Omar Doyle,omar.doyle667@example.com,(555) 0167-1667,Fortnightly clean,115,Fortnightly,05/23/2024,
+Daniel Fox,daniel.fox668@example.com,(555) 0168-1668,Fortnightly clean,125,Every 2 weeks,2026-03-21,
+Leo Carter,leo.carter669@example.com,(555) 0169-1669,Weekly clean,105,weekly,12/30/2025,Key holder
+Tara Brooks,tara.brooks670@example.com,(555) 0170-1670,Fortnightly clean,110,Fortnightly,12/24/2025,VIP
+Raj Fox,raj.fox671@example.com,(555) 0171-1671,Fortnightly clean,$125.00,Fortnightly,06/27/2021,
+Fred Young,fred.young672@example.com,(555) 0172-1672,Window cleaning,75,every 4 weeks,06/21/2018,
+Omar Reid,omar.reid673@example.com,(555) 0173-1673,Fortnightly clean,$120.00,Fortnightly,09/14/2023,Commercial
+Esme James,esme.james674@example.com,(555) 0174-1674,Office clean,$375.00,weekly,04/06/2026,Commercial
+Max Khan,max.khan675@example.com,(555) 0175-1675,Office clean,460,weekly,02/13/2019,Commercial
+Sara Clarke,sara.clarke676@example.com,(555) 0176-1676,Weekly clean,125,weekly,10/19/2022,
+,,,,,,,
+Uma Ellis,uma.ellis677@example.com,(555) 0177-1677,Fortnightly clean,140,Every 2 weeks,11/02/2018,
+Lena Shaw,lena.shaw678@example.com,(555) 0178-1678,Weekly clean,95,weekly,11/05/2018,Friends & family
+Vic Hale,vic.hale679@example.com,(555) 0179-1679,Weekly clean,$120.00,weekly,01/02/2018,Commercial
+Harry Irving,harry.irving680@example.com,(555) 0180-1680,Weekly clean,140,weekly,2019-10-28,Commercial
+Sam Baker,sam.baker681@example.com,(555) 0181-1681,Monthly deep clean,$210.00,monthly,11/30/2017,
+Fred Fox,fred.fox682@example.com,(555) 0182-1682,Window cleaning,$75.00,every 4 weeks,04/26/2020,Key holder
+Uma Upton,uma.upton683@example.com,(555) 0183-1683,Weekly clean,$115.00,weekly,2022-07-06,Senior discount
+Ava Zhang,ava.zhang684@example.com,(555) 0184-1684,Office clean,$330.00,weekly,04/18/2020,Commercial
+Ben Brooks,ben.brooks685@example.com,(555) 0185-1685,Office clean,475,weekly,12/18/2024,Commercial
