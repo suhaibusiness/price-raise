@@ -37,6 +37,18 @@ export function toICS(events, stamp = new Date()) {
   return lines.join('\r\n') + '\r\n';
 }
 
+// AC-O16: "Remind me next year", one all-day event 11 months after the effective date (day kept, or the month's last day).
+export function nextYearDate(effective) {
+  const [y, m, d] = effective.split('-').map(Number);
+  const t = m - 1 + 11, ny = y + Math.floor(t / 12), nm = t % 12;
+  const last = new Date(Date.UTC(ny, nm + 1, 0)).getUTCDate();
+  return `${ny}-${String(nm + 1).padStart(2, '0')}-${String(Math.min(d, last)).padStart(2, '0')}`;
+}
+export function nextYearEvent(effective) {
+  return { date: nextYearDate(effective), title: 'Plan this year’s price rise',
+    description: `Your last price rise started ${effective}. A month from now it is a year old. Open Price Raise with your client list to plan the next one.` };
+}
+
 export function download(name, text, type = 'text/csv;charset=utf-8') {
   const blob = new Blob([type.startsWith('text/csv') ? '\ufeff' + text : text], { type });
   const a = document.createElement('a');

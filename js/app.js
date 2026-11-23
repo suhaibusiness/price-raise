@@ -310,7 +310,7 @@ function viewRules() {
         ${!anniv ? `<div style="margin:0 0 10px 26px;max-width:220px"><label class="sr-only" for="eff-date">Start date</label><input type="date" id="eff-date" value="${esc(S.plan.effective.date)}"></div>` : ''}
         <label class="radio"><input type="radio" name="eff" value="anniversary" ${anniv ? 'checked' : ''} ${S.mapping.since < 0 ? 'disabled' : ''}><span><strong>Each client's anniversary month</strong><br><span class="muted small">${S.mapping.since < 0 ? 'Needs a "client since" column.' : 'Spreads the change across the year. Starts on the 1st of the month they joined.'}${anniv && noSince ? ` ${plural(noSince, 'client')} with no start date use ${esc(N.longDate(S.plan.effective.date, S.settings.dateStyle))}.` : ''}</span></span></label>
       </div>
-      <div class="field"><label for="lead">Tell clients this many days before</label><input type="number" id="lead" data-plan="leadDays" min="0" step="1" value="${esc(lead)}" style="max-width:110px"><div class="hint">30 days is the usual courtesy, and some contracts ask for it.</div></div>
+      <div class="field"><label for="lead">Tell clients this many days before</label><input type="number" id="lead" data-plan="leadDays" min="0" step="1" value="${esc(lead)}" style="max-width:110px"><div class="hint notice-advice">30-60 days' notice is the usual advice: <a href="${R.ADVICE.billbooks}" target="_blank" rel="noopener">billbooks</a> says 30 to 60 days and <a href="${R.ADVICE.calfrenzy}" target="_blank" rel="noopener">Calfrenzy</a> at least 30, both read ${esc(N.longDate(R.ADVICE.read, S.settings.dateStyle))}. Some contracts ask for a set notice too.</div></div>
       ${late ? `<p class="note warn" role="alert">${plural(late, 'client')} would get less notice than that, because the date to tell them has passed. Choose a later start date.</p>` : ''}
     </div>
     ${loyaltyCard()}
@@ -526,6 +526,9 @@ function viewSend() {
     <div class="card"><h3>4. One-page summary</h3>
       <p>The numbers, the rule and the dates on one page, to print or save as PDF for your records or your bookkeeper.</p>
       <button class="btn" data-action="print">Print summary</button></div>
+    <div class="card" id="remind-card"><h3>5. Remind me next year</h3>
+      <p>One calendar reminder 11 months after the new prices start${list.length ? ` (on ${esc(N.longDate(X.nextYearDate(firstEffective()), S.settings.dateStyle))})` : ''}, so next year's rise is planned before the date comes round.</p>
+      <button class="btn" data-action="x-remind" ${list.length ? '' : 'disabled'}>Remind me next year (.ics)</button></div>
   </div>
   <div class="card" style="margin-top:16px"><h3>Keep your work</h3>
     <p class="muted small">Your work is kept in this browser automatically. To move it to another computer, or keep a copy, save a project file and open it here later.</p>
@@ -546,6 +549,7 @@ function checklistRows() {
     ...raisedList().sort((a, b) => (a.effective + a.client.name).localeCompare(b.effective + b.client.name))
       .map((r) => ['', r.client.name, r.client.jobNumber, r.client.service, r.old, r.price, Math.round((r.price - r.old) * 100) / 100, r.effective, r.notice, r.grace || '', ...(lock ? [r.lockBy, r.lockUntil] : []), ...S.source.rows[r.client.row]])];
 }
+const firstEffective = () => raisedList().map((r) => r.effective).sort()[0];
 function icsEvents() {
   const by = (key) => raisedList().reduce((m, r) => ((m[r[key]] ||= []).push(r), m), {});
   const names = (list) => list.slice(0, 25).map((r) => `${r.client.name}: ${m2(r.old)} to ${m2(r.price)}`).join('\n') + (list.length > 25 ? `\n...and ${list.length - 25} more (see your checklist file)` : '');
@@ -590,6 +594,8 @@ function printSummary() {
 }
 
 // ---------- step 6: replies ----------
+// AC-O8: the one Beyond 1M line, after the result
+const B1M = '<p class="small muted b1m">Clients who stay will call and text with questions. We also make Beyond 1M, which answers your calls and texts and follows up your quotes.</p>';
 function viewReplies() {
   const rt = R.replyTotals(results, S.log);
   const marked = rt.raised - rt.waiting;
@@ -616,7 +622,7 @@ function viewReplies() {
     <td><label class="sr-only" for="nt-${r.id}">Note about ${esc(r.client.name)}</label><input type="text" class="note-in" id="nt-${r.id}" data-note="${r.id}" value="${esc(S.log[r.id]?.note || '')}" placeholder="e.g. asked to stay at old price till March"></td></tr>`).join('')
     || `<tr><td colspan="5" class="muted" style="text-align:center;padding:24px">No clients here.</td></tr>`}
   </tbody></table>
-  ${list.length > shown.length ? `<div class="more"><button class="btn sm" data-action="more">Show ${Math.min(100, list.length - shown.length)} more</button> <button class="btn sm ghost" data-action="all">Show all ${list.length.toLocaleString('en-US')}</button></div>` : ''}</div>` + foot('send', null);
+  ${list.length > shown.length ? `<div class="more"><button class="btn sm" data-action="more">Show ${Math.min(100, list.length - shown.length)} more</button> <button class="btn sm ghost" data-action="all">Show all ${list.length.toLocaleString('en-US')}</button></div>` : ''}</div>${B1M}` + foot('send', null);
 }
 
 // ---------- events ----------
@@ -650,6 +656,7 @@ document.addEventListener('click', (e) => {
   else if (a === 'reset-tpl') { if (confirm('Go back to our original wording for this tone? Your edits to it will be lost.')) { S.templates[S.settings.tone] = structuredClone(N.DEFAULT_TEMPLATES[S.settings.tone]); changed(); } }
   else if (a === 'x-merge') { X.download(fileBase() + 'notices.csv', X.toCSV(mergeRows())); toast('Notices downloaded'); }
   else if (a === 'x-list') { X.download(fileBase() + 'price-changes-to-make.csv', X.toCSV(checklistRows())); toast('Checklist downloaded'); }
+  else if (a === 'x-remind') { X.download(fileBase() + 'remind-next-year.ics', X.toICS([X.nextYearEvent(firstEffective())]), 'text/calendar;charset=utf-8'); toast('Next year’s reminder downloaded'); }
   else if (a === 'x-ics') { X.download(fileBase() + 'reminders.ics', X.toICS(icsEvents()), 'text/calendar;charset=utf-8'); toast('Calendar reminders downloaded'); }
   else if (a === 'print') printSummary();
   else if (a === 'save') saveProject();

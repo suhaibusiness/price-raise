@@ -53,6 +53,9 @@ export function raisePrice(old, rule) {
   return { price: fromC(c), reason };
 }
 
+// AC-O15: the notice advice shown next to the notice-days setting (saved copies in sources/advice-20261123/)
+export const ADVICE = { read: '2026-11-23', billbooks: 'https://www.billbooks.com/blog/how-to-raise-prices-with-existing-clients/', calfrenzy: 'https://calfrenzy.com/blog/price-increase-notice' };
+
 // ---- dates (all "YYYY-MM-DD", computed in UTC so time zones never shift a day) ----
 const D = (s) => new Date(s + 'T00:00:00Z');
 const S = (d) => d.toISOString().slice(0, 10);
