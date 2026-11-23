@@ -93,7 +93,8 @@ export const TRADES = {
   pest: { label: 'Pest control', wins: ['Regular treatments that stop pests before you see them', 'Free call-backs between visits if anything turns up', 'Treatments chosen to be safe around your family and pets'] },
   window: { label: 'Window cleaning', wins: ['Streak-free glass, with frames and sills wiped every visit', 'A text the day before, so you always know when we are coming', 'Screens and tracks cleaned at no extra charge'] },
 };
-export const tradeWins = (trade) => (TRADES[trade] || TRADES.cleaning).wins.join('\n');
+// No trade known (blank, one-input spec §3.2 #37): no starting wins, rather than a cleaner's.
+export const tradeWins = (trade) => (TRADES[trade] ? TRADES[trade].wins.join('\n') : '');
 
 export const SMS_LIMIT = 160;
 

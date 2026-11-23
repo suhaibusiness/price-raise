@@ -83,6 +83,19 @@ export function anniversaryDate(since, today, leadDays) {
   return null;
 }
 
+// Default exclusions (one-input spec §3.2 #22, Housecall Pro's bar): a tag containing one of these words, a client with
+// no email and no phone (only when the file has one of those columns), or a last visit over 3 years ago (only when a
+// last-visit column is mapped). "Client since" never excludes anyone. Each one is listed with its reason and one tap
+// (ticking the client) undoes it.
+export const DEFAULT_EXCLUDE_WORDS = ['do not service', 'inactive', 'past client', 'cancel'];
+export function defaultExclusion(c, today) {
+  const tag = (c.tags || []).find((t) => DEFAULT_EXCLUDE_WORDS.some((w) => t.toLowerCase().includes(w)));
+  if (tag) return `Tagged “${tag}”`;
+  if (c.noContact) return 'No email or phone to send the notice to';
+  if (c.lastVisit && c.lastVisit < addMonths(today, -36)) return 'Last visit over 3 years ago';
+  return '';
+}
+
 export function matchRule(client, rules) {
   for (const seg of rules.segments || []) {
     if (!seg.value) continue;
@@ -108,10 +121,11 @@ export function computeAll(clients, plan, per = {}, today = todayISO()) {
   return clients.map((c) => {
     const p = per[c.id] || {};
     const r = { id: c.id, client: c, old: c.price, price: c.price, autoPrice: c.price, raised: false, excluded: '', reason: '',
-      overridden: false, effective: '', baseEffective: '', notice: '', grace: 0, lockBy: '', lockUntil: '', rule: null };
+      overridden: false, auto: false, effective: '', baseEffective: '', notice: '', grace: 0, lockBy: '', lockUntil: '', rule: null };
     if (c.price === null) { r.excluded = 'No price in your file'; return r; }
     if (p.include === false) r.excluded = 'You unticked this client';
     else if (excludeTags.length && c.tags.some((t) => excludeTags.includes(t.toLowerCase()))) r.excluded = 'Excluded tag';
+    else if (p.include !== true && plan.defaultExclude !== false && (r.excluded = defaultExclusion(c, today))) r.auto = true;
     else if (cutoff && c.since && c.since > cutoff) r.excluded = `Client for under ${newer} month${newer === 1 ? '' : 's'}`;
     const rule = matchRule(c, plan.rules);
     r.rule = rule;

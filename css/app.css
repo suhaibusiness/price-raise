@@ -253,3 +253,23 @@ table.data input.note-in { min-width: 200px; }
   #print-summary .big { font-size: 26pt; font-weight: 700; }
   @page { margin: 16mm; }
 }
+
+/* One-input first screen (one-input spec §5.2, tools-offer AC-O11) and the preview's read line and left-out list */
+.home-drop { margin-top: 22px; text-align: left; padding: 22px; }
+.home-drop h3 { margin: 6px 0 4px; }
+.home-drop p { margin: 0; }
+.home-more { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 10px 16px; margin-top: 14px; }
+.estimate { flex: 1 1 260px; }
+.estimate summary { cursor: pointer; color: var(--accent); font-weight: 600; padding: 8px 0; }
+.qe-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 8px; }
+.qe-row .field { margin: 0; }
+.qe-row label { font-size: 13px; }
+@media (max-width: 520px) { .qe-row { grid-template-columns: 1fr; } }
+.readline { margin: 0 0 12px; color: var(--text-2, inherit); line-height: 1.7; }
+.guess-note .chip { margin-right: 6px; }
+.map-table .guess { display: inline-block; margin: 0 0 6px; }
+.leftout { margin-bottom: 16px; }
+.leftout h3 { margin: 0 0 4px; }
+.leftout ul { list-style: none; margin: 10px 0 0; padding: 0; }
+.leftout li { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 8px 0; border-top: 1px solid var(--line); }
+.leftout li > span { min-width: 0; }

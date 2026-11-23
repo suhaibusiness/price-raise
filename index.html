@@ -48,9 +48,23 @@
       <div>
         <h1>Raise your prices.<br>Keep your clients.</h1>
         <p class="lead">For cleaning, lawn, pool, pest and window businesses with a list of regulars. Upload your client list, set one simple rule and see exactly what you'll gain each month before you change a thing. Then send every client a warm, personal note a month ahead, and keep track of who replies.</p>
-        <div class="ctas">
-          <a class="btn primary lg" href="#/app">Start with my client list</a>
-          <button class="btn lg" data-action="sample">Try it with sample clients</button>
+        <label class="drop home-drop" id="home-drop" for="home-file">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" style="color:var(--accent)"><path d="M12 16V4m0 0l-4 4m4-4l4 4"/><path d="M4 16v4h16v-4"/></svg>
+          <h3>Drop your client list</h3>
+          <p>A CSV or Excel export from Jobber, Housecall Pro or your own spreadsheet, with a name and a price per client. You see every new price before anything changes.</p>
+          <input type="file" id="home-file" class="sr-only" accept=".csv,.txt,.xlsx,.xls,text/csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel">
+        </label>
+        <div id="home-file-error" class="note warn hidden" role="alert"></div>
+        <div class="home-more">
+          <details class="estimate" id="estimate"><summary>No file handy? Quick estimate</summary>
+            <div class="qe-row">
+              <div class="field"><label for="qe-clients">Regular clients</label><input type="text" inputmode="numeric" id="qe-clients" placeholder="200"></div>
+              <div class="field"><label for="qe-price">Average price a month</label><input type="text" inputmode="decimal" id="qe-price" placeholder="150"></div>
+              <div class="field"><label for="qe-rise">Rise (%)</label><input type="text" inputmode="decimal" id="qe-rise" placeholder="5"></div>
+            </div>
+            <p class="small" id="qe-out" aria-live="polite">Fill in all three to see it.</p>
+          </details>
+          <button class="btn ghost" data-action="sample">Try it with sample clients</button>
         </div>
         <p class="privacy"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg>
           <span>Your client list stays in this browser. There's no account and nothing is uploaded to a server.</span></p>

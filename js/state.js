@@ -10,9 +10,9 @@ export function fresh() {
       excludeTags: [], newerThanMonths: 0, effective: { mode: 'date', date: '' }, leadDays: 30,
       grace: { on: true, minMonths: 24, months: 3 }, lockIn: { on: false, replyDays: 14, months: 6 } },
     per: {}, log: {},
-    settings: { business: '', owner: '', currency: '$', dateStyle: 'us', tone: 'warm', trade: 'cleaning', wins: { '*': N.tradeWins('cleaning') } },
+    settings: { business: '', owner: '', currency: '$', dateStyle: 'us', tone: 'warm', trade: '', wins: { '*': '' } },
     templates: structuredClone(N.DEFAULT_TEMPLATES), tplVersion: 2,
-    gen: { tone: 'warm', trade: 'cleaning', wins: N.tradeWins('cleaning'), business: '', owner: '', first: '', service: '', old: '', nw: '', date: '' },
+    gen: { tone: 'warm', trade: '', wins: '', business: '', owner: '', first: '', service: '', old: '', nw: '', date: '' },
     ui: { sort: 'name', dir: 1, filter: 'all', q: '', limit: 100, previewId: '', churn: 2, replyFilter: 'all', rq: '', winsFor: '*' },
   };
 }
@@ -77,10 +77,10 @@ export function upgrade(s) {
   st.currency = one(st.currency, CURRENCIES, '$');
   st.dateStyle = one(st.dateStyle, ['us', 'uk'], 'us');
   st.tone = one(st.tone, Object.keys(N.TONES), 'warm');
-  st.trade = one(st.trade, Object.keys(N.TRADES), 'cleaning');
+  st.trade = one(st.trade, ['', ...Object.keys(N.TRADES)], '');
   st.wins = textMap(s.settings?.wins) || f.settings.wins;
   out.gen.tone = one(out.gen.tone, Object.keys(N.TONES), 'warm');
-  out.gen.trade = one(out.gen.trade, Object.keys(N.TRADES), 'cleaning');
+  out.gen.trade = one(out.gen.trade, ['', ...Object.keys(N.TRADES)], '');
   // Notices written before the five-part structure (v1.1) are replaced by the new wording.
   out.templates = s.tplVersion === 2 ? out.templates : f.templates;
   out.tplVersion = 2;

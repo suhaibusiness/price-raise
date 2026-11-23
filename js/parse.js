@@ -12,6 +12,7 @@ export const FIELDS = [
   { key: 'since', label: 'Client since' },
   { key: 'tags', label: 'Tags' },
   { key: 'jobNumber', label: 'Job number (optional)' },
+  { key: 'lastVisit', label: 'Last visit (optional)' },
 ];
 
 // Header aliases. Jobber names come from its Recurring Jobs Report help page (see README).
@@ -26,6 +27,7 @@ const ALIASES = {
   frequency: ['frequency', 'repeating', 'how often', 'recurrence', 'schedule', 'interval', 'visit frequency', 'repeats'],
   since: ['client since', 'customer since', 'schedule start date', 'start date', 'created', 'created date', 'created at', 'date added', 'joined', 'since', 'first visit'],
   tags: ['tags', 'tag', 'labels', 'segment', 'group', 'category'],
+  lastVisit: ['last visit', 'last service', 'last service date', 'last job date', 'last appointment', 'last visit date'],
   jobNumber: ['job #', 'job number', 'job no', 'job id', 'j-id', 'id', 'customer id', 'client id', 'account number'],
 };
 
@@ -49,6 +51,60 @@ export function guessMapping(headers) {
     }
   }
   return map;
+}
+
+// Fields whose column was a guess between two or more (one-input spec §3.2 #2-12): the same two passes as
+// guessMapping, flagging a field when the pass that chose its header found two or more unused headers that fit.
+// "Phone" + "Mobile" tie; "Customer since" doesn't tie with name, because since takes it in the exact pass first.
+export function mappingTies(headers) {
+  const h = headers.map(norm);
+  const used = new Set();
+  const map = {}, ties = [];
+  for (const pass of ['exact', 'contains']) {
+    for (const f of FIELDS) {
+      if (map[f.key] !== undefined && map[f.key] !== -1) continue;
+      const fits = (x, idx, alias) => !used.has(idx) && (pass === 'exact' ? x === alias : alias.length > 3 && x.includes(alias));
+      let found = -1;
+      for (const alias of ALIASES[f.key]) {
+        const i = h.findIndex((x, idx) => fits(x, idx, alias));
+        if (i !== -1) { found = i; break; }
+      }
+      if (found !== -1) {
+        const all = new Set(ALIASES[f.key].flatMap((alias) => h.map((x, idx) => (fits(x, idx, alias) ? idx : -1)).filter((i) => i >= 0)));
+        if (all.size > 1) ties.push(f.key);
+        used.add(found);
+      }
+      map[f.key] = found;
+    }
+  }
+  return ties;
+}
+
+// The currency from the symbols written in the price column; else from the browser's region (§3.2 #35).
+export function detectCurrency(values, locale = '') {
+  const n = { '£': 0, '€': 0, '$': 0, R: 0 };
+  for (const v of values) {
+    const t = String(v ?? '');
+    if (t.includes('£')) n['£']++; else if (t.includes('€')) n['€']++; else if (t.includes('$')) n['$']++; else if (/^\s*R\s?\d/.test(t)) n.R++;
+  }
+  const best = Object.entries(n).sort((a, b) => b[1] - a[1])[0];
+  if (best[1] > 0) return best[0];
+  const region = (String(locale).split('-')[1] || '').toUpperCase();
+  return region === 'GB' ? '£' : ['IE', 'DE', 'FR', 'ES', 'IT', 'NL'].includes(region) ? '€' : region === 'ZA' ? 'R' : '$';
+}
+
+// The trade from the service words (§3.2 #37): the trade most rows name, or '' when the words match none.
+// Window comes before cleaning, so "Window cleaning" is window work.
+const TRADE_WORDS = [['window', /\bwindows?\b/i], ['pool', /\b(?:pool|spa)s?\b/i], ['pest', /\b(?:pest|termite|rodent|exterminat\w*|bug|mosquito)s?\b/i],
+  ['lawn', /\b(?:lawn|mow\w*|yard|garden\w*|landscap\w*|grass|hedge)s?\b/i], ['cleaning', /\b(?:clean\w*|maid|janitorial|housekeep\w*|tidy)\b/i]];
+export function detectTrade(services) {
+  const n = {};
+  for (const s of services) {
+    const hit = TRADE_WORDS.find(([, re]) => re.test(String(s ?? '')));
+    if (hit) n[hit[0]] = (n[hit[0]] || 0) + 1;
+  }
+  const best = Object.entries(n).sort((a, b) => b[1] - a[1])[0];
+  return best ? best[0] : '';
 }
 
 // "$1,250.00" -> 1250, "45,50" -> 45.5, "1.250,00" -> 1250, "" -> null, "abc" -> null, negatives -> null.
@@ -151,14 +207,15 @@ function ymd(d, utc) {
     : `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 }
 // Detect whether a column of dates is day-first: any first part > 12 means d/m/y.
-export function detectDateOrder(values) {
+// A day over 12 settles it; with none, the browser's locale does (en-US month first, other English locales day first).
+export function detectDateOrder(values, fallback = 'mdy') {
   let dmy = 0, mdy = 0;
   for (const v of values) {
     const m = String(v ?? '').trim().match(/^(\d{1,2})[-/.](\d{1,2})[-/.]\d{2,4}$/);
     if (!m) continue;
     if (+m[1] > 12) dmy++; else if (+m[2] > 12) mdy++;
   }
-  return dmy > mdy ? 'dmy' : 'mdy';
+  return dmy > mdy ? 'dmy' : mdy > dmy ? 'mdy' : fallback;
 }
 
 export function firstNameOf(name) {
@@ -175,7 +232,7 @@ export function buildClients(headers, rows, mapping, opts = {}) {
   const defVpm = (FREQ_OPTIONS.find((f) => f[0] === opts.defaultFreq) || FREQ_OPTIONS[4])[2];
   const get = (row, key) => (mapping[key] >= 0 ? row[mapping[key]] : '');
   const dateOrder = opts.dateOrder && opts.dateOrder !== 'auto' ? opts.dateOrder
-    : mapping.since >= 0 ? detectDateOrder(rows.map((r) => r[mapping.since])) : 'mdy';
+    : detectDateOrder(rows.flatMap((r) => ['since', 'lastVisit'].filter((k) => mapping[k] >= 0).map((k) => r[mapping[k]])), opts.localeOrder || 'mdy');
   const clients = [];
   const issues = { blank: 0, duplicates: 0, noPrice: 0, noName: 0, freqUnknown: 0, dupNames: [] };
   const seen = new Set();
@@ -213,6 +270,9 @@ export function buildClients(headers, rows, mapping, opts = {}) {
       since: parseDate(get(row, 'since'), dateOrder),
       tags: String(get(row, 'tags') ?? '').split(/[,;|]/).map((t) => t.trim()).filter(Boolean),
       jobNumber: String(get(row, 'jobNumber') ?? '').trim(),
+      lastVisit: parseDate(get(row, 'lastVisit'), dateOrder),
+      // No way to send the notice: only judged when the file has an email or a phone column (§3.2 #22).
+      noContact: (mapping.email >= 0 || mapping.phone >= 0) && !email && !String(get(row, 'phone') ?? '').trim(),
     });
   });
   const byName = {};

@@ -43,7 +43,7 @@ function save() {
 }
 function recompute() {
   if (!S.source) { built = null; results = []; tot = null; return; }
-  built = P.buildClients(S.source.headers, S.source.rows, S.mapping, { basis: S.basis, defaultFreq: S.defaultFreq, dateOrder: S.dateOrder });
+  built = P.buildClients(S.source.headers, S.source.rows, S.mapping, { basis: S.basis, defaultFreq: S.defaultFreq, dateOrder: S.dateOrder, localeOrder: localeOrder() });
   if (!S.plan.effective.date) S.plan.effective.date = R.defaultEffectiveDate(R.todayISO(), S.plan.leadDays);
   results = R.computeAll(built.clients, S.plan, S.per);
   tot = R.totals(results);
@@ -138,8 +138,9 @@ function viewClients() {
   const h = S.source.headers;
   const ex = (i) => S.source.rows.map((r) => r[i]).filter((v) => String(v ?? '').trim() !== '').slice(0, 3).map(String).join(' · ');
   const opts = (sel) => `<option value="-1">Not in my file</option>` + h.map((x, i) => `<option value="${i}" ${+sel === i ? 'selected' : ''}>${esc(x)}</option>`).join('');
+  const ties = guessedFields();
   const mapRows = P.FIELDS.map((f) => `<tr><td><label for="map-${f.key}">${f.label}${f.required ? ' <span class="req" aria-label="required">*</span>' : ''}</label></td>
-    <td><select id="map-${f.key}" data-map="${f.key}">${opts(S.mapping[f.key])}</select>${S.mapping[f.key] >= 0 ? `<span class="eg">${esc(ex(S.mapping[f.key])) || 'empty column'}</span>` : ''}</td></tr>`).join('');
+    <td>${ties.includes(f.key) ? '<span class="chip warn guess">Our guess: check it</span>' : ''}<select id="map-${f.key}" data-map="${f.key}">${opts(S.mapping[f.key])}</select>${S.mapping[f.key] >= 0 ? `<span class="eg">${esc(ex(S.mapping[f.key])) || 'empty column'}</span>` : ''}</td></tr>`).join('');
   const nameOk = S.mapping.name >= 0 || S.mapping.firstName >= 0;
   const priceOk = S.mapping.price >= 0;
   let checks = '';
@@ -202,12 +203,27 @@ function setSource(fileName, sheet, sample) {
   S.mapping = P.guessMapping(headers);
   S.basis = guessBasis(headers, S.mapping);
   S.defaultFreq = S.mapping.frequency >= 0 ? 'monthly' : (S.basis === 'visit' ? 'fortnightly' : 'monthly');
-  S.step = 'clients';
+  // One input (one-input spec §3.2): currency, date style and trade come from the file, else the browser's locale.
+  const col = (k) => (S.mapping[k] >= 0 ? rows.map((r) => r[S.mapping[k]]) : []);
+  S.settings.currency = P.detectCurrency(col('price'), navigator.language || '');
+  S.settings.dateStyle = P.detectDateOrder([...col('since'), ...col('lastVisit')], localeOrder()) === 'dmy' ? 'uk' : 'us';
+  const trade = P.detectTrade(col('service')), w = S.settings.wins, now = (w['*'] || '').trim();
+  if (!now || Object.keys(N.TRADES).some((k) => N.tradeWins(k) === now)) S.settings.wins = { ...w, '*': N.tradeWins(trade) };
+  S.settings.trade = trade;
+  S.step = (S.mapping.name >= 0 || S.mapping.firstName >= 0) && S.mapping.price >= 0 ? 'preview' : 'clients';
   save();
 }
+// en-US writes the month first; other locales with a region write the day first.
+const localeOrder = () => (/^en(-US)?$/i.test(navigator.language || 'en-US') ? 'mdy' : /-/.test(navigator.language || '') ? 'dmy' : 'mdy');
+// Fields whose column was one guess among two or more, and that the owner hasn't changed: "Our guess: check it".
+function guessedFields() {
+  if (!S.source) return [];
+  const g = P.guessMapping(S.source.headers);
+  return P.mappingTies(S.source.headers).filter((k) => S.mapping[k] >= 0 && S.mapping[k] === g[k]);
+}
 
-async function readFile(file) {
-  const err = $('#file-error');
+async function readFile(file, errBox) {
+  const err = errBox || $('#file-error');
   const fail = (msg) => { if (err) { err.innerHTML = msg; err.classList.remove('hidden'); } else toast(msg.replace(/<[^>]+>/g, '')); };
   try {
     let sheet;
@@ -222,7 +238,8 @@ async function readFile(file) {
       sheet = P.parseCSV(await file.text());
     }
     setSource(file.name, sheet);
-    renderApp();
+    err?.classList.add('hidden');
+    go(S.step);
     toast(`Loaded ${file.name}`);
   } catch (e) {
     if (e.message === 'xlsx-load') fail('We couldn’t load the Excel reader (it needs an internet connection the first time). Save the sheet as <strong>CSV</strong> and drop that in instead.');
@@ -243,7 +260,7 @@ async function loadSample(kind = 'clients') {
   try {
     const text = await (await fetch(SAMPLES[kind].url, { cache: 'no-store' })).text();
     setSource(SAMPLES[kind].url.split('/').pop(), P.parseCSV(text), kind);
-    go('clients');
+    go(S.step);
   } catch (e) { toast('The sample file could not be loaded.'); }
 }
 
@@ -362,11 +379,11 @@ function viewPreview() {
     const lockReason = r.old === null || /tag|Client for/.test(r.excluded);
     const ch = r.raised ? r.price - r.old : 0;
     return `<tr class="${r.raised ? '' : 'off'}">
-      <td><input type="checkbox" data-inc="${c.id}" aria-label="Raise ${esc(c.name)}" ${S.per[c.id]?.include === false || lockReason ? '' : 'checked'} ${lockReason ? 'disabled' : ''}></td>
+      <td><input type="checkbox" data-inc="${c.id}" aria-label="Raise ${esc(c.name)}" ${S.per[c.id]?.include === false || lockReason || r.auto ? '' : 'checked'} ${lockReason ? 'disabled' : ''}></td>
       <td>${esc(c.name)}<span class="sub">${r.excluded ? esc(r.excluded) : r.reason === 'cap' ? 'Held to your biggest rise' : r.reason === 'floor' ? 'Raised to your lowest price' : esc(c.tags.join(', '))}</span></td>
       <td>${esc(c.service) || '<span class="muted">—</span>'}<span class="sub">${esc(c.freqLabel)}</span></td>
       <td class="r num">${r.old === null ? '<span class="chip warn">no price</span>' : m2(r.old)}</td>
-      <td class="r">${r.old === null ? '' : `<input class="ov num ${r.overridden ? 'changed' : ''}" type="text" inputmode="decimal" data-ov="${c.id}" id="ov-${c.id}" value="${r.excluded && !r.overridden ? '' : esc(r.price)}" placeholder="${esc(r.old)}" aria-label="New price for ${esc(c.name)}" ${lockReason || S.per[c.id]?.include === false ? 'disabled' : ''}>`}</td>
+      <td class="r">${r.old === null ? '' : `<input class="ov num ${r.overridden ? 'changed' : ''}" type="text" inputmode="decimal" data-ov="${c.id}" id="ov-${c.id}" value="${r.excluded && !r.overridden ? '' : esc(r.price)}" placeholder="${esc(r.old)}" aria-label="New price for ${esc(c.name)}" ${lockReason || r.auto || S.per[c.id]?.include === false ? 'disabled' : ''}>`}</td>
       <td class="r num">${r.raised ? `<span class="${ch > 0 ? 'gain' : 'loss'}">${ch > 0 ? '+' : ''}${m2(ch)}</span><span class="sub">${Math.round((ch / r.old) * 1000) / 10}% · ${signed0(ch * c.factor)}/mo</span>` : ''}</td>
       <td class="num">${r.effective ? esc(shortDate(r.effective)) : ''}${r.grace ? `<span class="sub">+${r.grace} months, thank-you</span>` : ''}</td>
       <td class="num">${r.notice ? `<span class="${r.notice < R.todayISO() ? 'loss' : ''}">${esc(shortDate(r.notice))}</span>` : ''}</td></tr>`;
@@ -378,6 +395,7 @@ function viewPreview() {
     <div class="stat hl"><div class="k">Extra each month</div><div class="v gain">${signed0(tot.gainMonthly)}</div><div class="s">${signed0(tot.gainYearly)} a year</div></div>
     <div class="stat"><div class="k">Clients raised</div><div class="v">${tot.raised.toLocaleString('en-US')}</div><div class="s">${tot.excluded ? `${tot.excluded.toLocaleString('en-US')} left as they are` : 'everyone'}</div></div>
   </div>
+  ${readFromFile()}
   ${tot.lateNotice ? `<p class="note warn" role="alert">${plural(tot.lateNotice, 'client')} would get less than ${S.plan.leadDays} days' notice. <button class="btn sm" data-step="rules">Change the start date</button></p>` : ''}
   ${tot.graceClients ? `<p class="note">Loyalty grace: ${plural(tot.graceClients, 'long-time client')} keep their current price ${S.plan.grace.months} months longer, which costs about <strong>${m0(tot.graceCost)}</strong> this year (over the next 12 months). Their start dates below already include it.</p>` : ''}
   <div class="card churn" style="margin-bottom:16px">
@@ -395,6 +413,19 @@ function viewPreview() {
   <div class="table-wrap"><table class="data"><thead><tr><th><span class="sr-only">Raise</span></th>${th('name', 'Client')}${th('service', 'Service')}${th('old', 'Now', 'r')}${th('price', 'New', 'r')}${th('change', 'Change', 'r')}${th('effective', 'Starts')}<th>Tell them by</th></tr></thead>
   <tbody>${rows || `<tr><td colspan="8" class="muted" style="text-align:center;padding:24px">No clients match.</td></tr>`}</tbody></table>
   ${list.length > shown.length ? `<div class="more"><button class="btn sm" data-action="more">Show ${Math.min(100, list.length - shown.length)} more</button> <button class="btn sm ghost" data-action="all">Show all ${list.length.toLocaleString('en-US')}</button></div>` : ''}</div>` + foot('rules', 'notices', 'Next: write the notices');
+}
+// What the one file settled, each with a way to change it, plus the guesses and the default exclusions (AC-P1 to P3).
+function readFromFile() {
+  const d = S.plan.rules.default;
+  const fieldLabel = (k) => P.FIELDS.find((f) => f.key === k).label.replace(/ \(.*\)$/, '').toLowerCase();
+  const trade = N.TRADES[S.settings.trade]?.label;
+  const guesses = guessedFields().map((k) => `<p class="note warn guess-note"><span class="chip warn">Our guess: check it</span> More than one column could be the ${esc(fieldLabel(k))}; we used “${esc(S.source.headers[S.mapping[k]])}”. <button class="btn sm" data-step="clients">Check your columns</button></p>`).join('');
+  const out = results.filter((r) => r.auto);
+  const left = out.length ? `<div class="card leftout" id="left-out"><h3>Left out for you (${out.length})</h3>
+    <p class="muted small">Clients the usual advice leaves alone. Raise any of them with one tap.</p>
+    <ul>${out.map((r) => `<li><span><strong>${esc(r.client.name)}</strong><span class="muted"> · ${esc(r.excluded)}</span></span><button class="btn sm" data-undo="${esc(r.id)}">Raise anyway</button></li>`).join('')}</ul></div>` : '';
+  return `<p class="readline small" id="read-line"><strong>Read from ${esc(S.source.fileName)}:</strong> prices in ${esc(cur())}, dates ${S.settings.dateStyle === 'uk' ? 'day first' : 'month first'}, trade ${trade ? esc(trade) : 'not set (no trade words in your services)'}.
+    Rule: ${d.type === 'percent' ? `${esc(d.amount)}%` : `${esc(cur())}${esc(d.amount)}`} for everyone. <button class="btn sm ghost" data-step="rules">Change the rule</button> <button class="btn sm ghost" data-step="clients">Check the columns</button></p>${guesses}${left}`;
 }
 function churnText(p, after, leave, be) {
   if (!tot.raised) return 'Nobody is being raised yet.';
@@ -447,7 +478,7 @@ function winsCard() {
   return `<div class="card" style="margin-bottom:16px"><h3>What your clients have had from you</h3>
     <p class="muted small" style="margin-top:0">These open every letter as short bullet points. Up to 5, one per line. Keep only what's true for you.</p>
     <div class="row">
-      <div class="field" style="flex:0 1 200px"><label for="set-trade">Your trade</label><select id="set-trade">${Object.entries(N.TRADES).map(([k, v]) => `<option value="${k}" ${S.settings.trade === k ? 'selected' : ''}>${v.label}</option>`).join('')}</select></div>
+      <div class="field" style="flex:0 1 200px"><label for="set-trade">Your trade</label><select id="set-trade"><option value="" ${S.settings.trade ? '' : 'selected'}>Not set</option>${Object.entries(N.TRADES).map(([k, v]) => `<option value="${k}" ${S.settings.trade === k ? 'selected' : ''}>${v.label}</option>`).join('')}</select></div>
       <div class="field" style="flex:0 1 260px"><label for="wins-for">Wins for</label><select id="wins-for">${['*', ...services].map((v) => `<option value="${esc(v)}" ${key === v ? 'selected' : ''}>${v === '*' ? 'Every service' : esc(v) + (N.winLines(S.settings.wins[v]).length ? '' : ' (uses every-service wins)')}</option>`).join('')}</select></div>
     </div>
     <div class="field"><label for="wins-text">${key === '*' ? 'Wins for every service' : `Wins for ${esc(key)} only`}</label><textarea id="wins-text" rows="6">${esc(S.settings.wins[key] || '')}</textarea>
@@ -597,6 +628,7 @@ document.addEventListener('click', (e) => {
   if (b.dataset.sort) { S.ui.dir = S.ui.sort === b.dataset.sort ? -S.ui.dir : 1; S.ui.sort = b.dataset.sort; save(); renderPanel(); return; }
   if (b.dataset.tone) { S.settings.tone = b.dataset.tone; save(); renderPanel(); $('#tone-' + b.dataset.tone)?.focus(); return; }
   if (b.dataset.ins) { insertTag(b.dataset.ins); return; }
+  if (b.dataset.undo) { (S.per[b.dataset.undo] ||= {}).include = true; changed(); toast('Raised anyway. Untick them in the list to leave them out again.'); return; }
   if (b.dataset.copy) { copyText($('#' + b.dataset.copy).innerText, b); return; }
   const a = b.dataset.action;
   if (!a) return;
@@ -710,6 +742,22 @@ panel.addEventListener('change', (e) => {
   if (d.note) { (S.log[d.note] ||= {}).note = t.value; save(); return; }
 });
 
+// home page: the one drop box (one-input spec §5.2) and the quick estimate (tools-offer AC-O11)
+document.addEventListener('change', (e) => { if (e.target.id === 'home-file' && e.target.files[0]) readFile(e.target.files[0], $('#home-file-error')); });
+document.addEventListener('dragover', (e) => { const z = e.target.closest && e.target.closest('#home-drop'); if (z) { e.preventDefault(); z.classList.add('over'); } });
+document.addEventListener('dragleave', (e) => { e.target.closest && e.target.closest('#home-drop')?.classList.remove('over'); });
+document.addEventListener('drop', (e) => { const z = e.target.closest && e.target.closest('#home-drop'); if (!z) return; e.preventDefault(); z.classList.remove('over'); const f = e.dataTransfer.files[0]; if (f) readFile(f, $('#home-file-error')); });
+document.addEventListener('input', (e) => {
+  if (!e.target.closest || !e.target.closest('#estimate')) return;
+  const v = (id) => P.parseMoney($('#' + id).value);
+  const n = v('qe-clients'), price = v('qe-price'), rise = v('qe-rise');
+  const out = $('#qe-out');
+  if (!(n > 0 && price > 0 && rise > 0)) { out.innerHTML = 'Fill in all three to see it.'; return; }
+  const month = n * price * rise / 100;
+  const whole = (x) => '$' + Math.round(x).toLocaleString('en-US');
+  out.innerHTML = `You’d gain about <strong class="gain">+${whole(month)} a month</strong>, <strong>+${whole(month * 12)} a year</strong>, if nobody leaves. Drop your list for every client’s new price.`;
+});
+
 // drag and drop
 panel.addEventListener('dragover', (e) => { const z = e.target.closest('#drop'); if (z) { e.preventDefault(); z.classList.add('over'); } });
 panel.addEventListener('dragleave', (e) => { e.target.closest('#drop')?.classList.remove('over'); });
@@ -746,10 +794,10 @@ function renderGen() {
   const sel = $('#g-tone');
   if (!sel.options.length) {
     sel.innerHTML = Object.entries(N.TONES).map(([k, v]) => `<option value="${k}">${v.label}</option>`).join('');
-    $('#g-trade').innerHTML = Object.entries(N.TRADES).map(([k, v]) => `<option value="${k}">${v.label}</option>`).join('');
+    $('#g-trade').innerHTML = '<option value="">Not set</option>' + Object.entries(N.TRADES).map(([k, v]) => `<option value="${k}">${v.label}</option>`).join('');
     for (const [id, k] of [['g-business', 'business'], ['g-owner', 'owner'], ['g-first', 'first'], ['g-service', 'service'], ['g-old', 'old'], ['g-new', 'nw'], ['g-date', 'date'], ['g-tone', 'tone'], ['g-trade', 'trade'], ['g-wins', 'wins']]) {
       const el = document.getElementById(id);
-      el.value = k === 'wins' ? g.wins ?? N.tradeWins(g.trade) : g[k] || (k === 'date' ? R.defaultEffectiveDate(R.todayISO(), 30) : k === 'tone' ? 'warm' : k === 'trade' ? 'cleaning' : '');
+      el.value = k === 'wins' ? g.wins ?? N.tradeWins(g.trade) : g[k] || (k === 'date' ? R.defaultEffectiveDate(R.todayISO(), 30) : k === 'tone' ? 'warm' : '');
       el.addEventListener('input', () => {
         if (k === 'trade') {
           const w = $('#g-wins'), now = w.value.trim();
